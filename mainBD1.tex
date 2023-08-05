@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[a4paper, left=2cm, right=2cm, top=2.5cm, bottom=2cm]{geometry}
+\usepackage[small]{titlesec}
+\usepackage{subcaption} 
+\usepackage[italian]{babel}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings}
+\usepackage{sectsty}
+%\usepackage[light]{CormorantGaramond}
+\usepackage{fancyhdr}
+\usepackage{footnote}
+\usepackage{tgadventor}
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{makecell}
+
+\setlength{\droptitle}{-5em}   % regola la posizione del titolo
+\pretitle{\begin{center}\LARGE}   % imposta la dimensione della font del titolo
+\posttitle{\end{center}}
+%\lstset{language=C}
+\renewcommand\bfdefault{bx}
+\sectionfont{\fontsize{20.74}{15}\selectfont}
+\subsectionfont{\fontsize{17.28}{15}\selectfont}
+\subsubsectionfont{\fontsize{12}{15}\selectfont}
+\title{}
+
+\author{}
+\date{\today}
+
+
+\begin{document}
+\pagestyle{fancy}
+\fancyhf{}
+%\rhead{\thepage}
+%\lhead{\rightmark}
+\rfoot{\thepage}
+\lhead{\quad \leftmark}
+\rhead{ \quad \rightmark}
+
+\renewcommand{\headrulewidth}{0.2pt}
+
+
+
+\begin{titlepage}
+    \begin{figure}[t]
+        \centering
+        \includegraphics[width=0.7\textwidth]{im/logo_sapienza_new.png}
+        \label{fig:logo}
+    \end{figure}    
+    \null\vfill
+    \begin{center}
+      {\Huge Appunti di Basi Dati Modulo I} \\[2cm]
+      {\Large Colacel Alexandru Andrei}
+    \end{center}
+    \vfill\null
+    \renewcommand{\abstractname}{Disclaimer}
+
+    
+    
+    \begin{abstract}  
+    
+    \hrulefill
+
+
+    Le fonti sono le Hand Notes del prof tradotte in italiano con l'obiettivo di migliorare la leggibilità.\\
+    \textbf{Nota: è vietata assolutamente la vendita di questo materiale in qualsiasi forma senza il mio consenso.}  
+
+    
+    \hrulefill
+
+    \end{abstract}
+  \end{titlepage}
+
+
+\pagebreak
+\tableofcontents
+
+\pagebreak
+
+
+\section{Lemma della Chiusura}
+Sia $R$ uno schema e sia $F$ un insieme di dipendenze funzionali definite su $R$. Si ha che:\par 
+\begin{equation}
+X \rightarrow Y \in F^{A} \Longleftrightarrow Y \subseteq X^{+}
+\end{equation}
+
+\subsection{Dimostrazione $\Rightarrow$}
+
+Dato $X$ $\rightarrow$ $Y \in F^{A}$, per la regola della decomposizione, otteniamo:
+\begin{equation}
+X \rightarrow A \in F^{A}, \quad \forall A \in Y  
+\end{equation} 
+e quindi, per definizione di $X^{+}$, otteniamo che: 
+\begin{equation}
+A \in X^{+}, \quad \forall A \in Y  
+\end{equation}
+che significa: 
+\begin{equation}
+Y \subseteq X^{+}
+\end{equation}
+
+
+\subsection{Dimostrazione $\Leftarrow$}
+Dato: 
+\begin{equation}
+Y \subseteq X^{+}
+\end{equation}
+si ottiene che: 
+\begin{equation}
+Y \subseteq A \in F^{A} \quad \forall A \in Y
+\end{equation}
+che implica, per la regola dell'unione, che: 
+\begin{equation}
+X \rightarrow Y \in F^{A}
+\end{equation}
+
+\pagebreak
+\section{FA = F$^{+}$}
+\pagebreak
+\section{Chiusura di X}
+\pagebreak
+\section{Lemma Chiusura Inclusione}
+\pagebreak
+\section{Chiusura di X in G}
+\pagebreak
+\section{Join senza perdita}
+
+
+\end{document}
