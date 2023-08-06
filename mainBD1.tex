@@ -178,27 +178,29 @@ Dato uno schema $R$ e un insieme $F$ di dipendenze funzionali definite su $R$, s
       Siccome per ipotesi induttiva $X \rightarrow Z \in F^{A} \Rightarrow X \rightarrow Z \in F^{+}$ e $Z \rightarrow Y \in F^{A} \Rightarrow Z \rightarrow Y \in F^{+}$, si vede facilmente che:
       \begin{figure}[hbt]
         \begin{center}
-            \includegraphics[width=0.8\textwidth,keepaspectratio]{{im/2}}
+            \includegraphics[width=0.7\textwidth,keepaspectratio]{{im/2}}
         \end{center}
         \end{figure}
   \end{enumerate}
 \end{itemize}
 
+\pagebreak
 \subsection{Dimostrazione $F^{+} \subseteq F^{A}$}
 \begin{figure}[hbt]
   \begin{center}
-      \includegraphics[width=0.7\textwidth,keepaspectratio]{{im/3}}
+      \includegraphics[width=0.75\textwidth,keepaspectratio]{{im/3}}
   \end{center}
   \end{figure}
   \begin{figure}[hbt]
     \begin{center}
-        \includegraphics[width=0.7\textwidth,keepaspectratio]{{im/4}}
+        \includegraphics[width=0.8\textwidth,keepaspectratio]{{im/4}}
     \end{center}
     \end{figure}
+    
     \begin{tcolorbox}[colback=white!20!white,colframe=green!70!black, title=Nota]
       Poiché $F^{+} = F^{A}$, per calcolare $F^{+}$ ci basta applicare gli assiomi di Armstrong sulle dipendenze in $F$ in modo da trovare $F^{A}$. \par Tuttavia, calcolare $F^{+} = F^{A}$ richiede tempo esponenziale, quindi $O(2^{nk})$: considerando anche solo l'assioma di riflessività, siccome ogni possibile sottoinsieme di $R$ genera una dipendenza e siccome i sottoinsiemi possibili di $R$ sono $2^{|R|}$, allora ne segue che $|F^{+}| >> 2^{|R|}$.
     \end{tcolorbox}
-    
+
     
 
 

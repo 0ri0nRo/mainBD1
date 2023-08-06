@@ -5,8 +5,8 @@
 \contentsline {subsection}{\numberline {1.2}Dimostrazione $\Leftarrow $}{2}{subsection.1.2}%
 \contentsline {section}{\numberline {2}Teorema $F^{+}$ = $F^{A}$}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Dimostrazione $F^{A} \subseteq F^{+}$}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Dimostrazione $F^{+} \subseteq F^{A}$}{4}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Chiusura di X}{5}{section.3}%
-\contentsline {section}{\numberline {4}Lemma Chiusura Inclusione}{6}{section.4}%
-\contentsline {section}{\numberline {5}Chiusura di X in G}{7}{section.5}%
-\contentsline {section}{\numberline {6}Join senza perdita}{8}{section.6}%
+\contentsline {subsection}{\numberline {2.2}Dimostrazione $F^{+} \subseteq F^{A}$}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Chiusura di X}{6}{section.3}%
+\contentsline {section}{\numberline {4}Lemma Chiusura Inclusione}{7}{section.4}%
+\contentsline {section}{\numberline {5}Chiusura di X in G}{8}{section.5}%
+\contentsline {section}{\numberline {6}Join senza perdita}{9}{section.6}%
