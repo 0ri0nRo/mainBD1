@@ -127,24 +127,21 @@ Dato uno schema $R$ e un insieme $F$ di dipendenze funzionali definite su $R$, s
 \end{equation}
 
 \subsection{Dimostrazione $F^{A} \subseteq F^{+}$}
+Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y \in F^{+}$ per induzione con $n$ numero di applicazioni degli assiomi di Armstrong.
 \begin{itemize}
   \item \textbf{Caso base} (n = 0): se $X \rightarrow Y \in F^{A}$ senza aver applicato alcun assioma di Armstrong, allora l'unica possibilità è che:
   \begin{equation}
-    X \rightarrow Y \in F^{A} \Leftrightarrow X \rightarrow Y \in F
+    X \rightarrow Y \in F \subseteq F^{+}
   \end{equation}
-  Siccome $X \rightarrow Y \in F$, allora 
-  \begin{equation}
-    X \rightarrow Y \in F \Rightarrow X \rightarrow Y \in F^{+}
-  \end{equation} 
   \item \textbf{Ipotesi induttiva forte:} ogni dipendenza funzionale in $F^{A}$ ottenuta da $F$
   applicando k $\leq$ n assiomi di Armstrong è anche in $F^{+}$:
-  \begin{equation}
-    X \rightarrow Y \in F^{A} tramite k \leq n assiomi \Rightarrow X \rightarrow Y \in F^{+}
-  \end{equation}
+  \begin{center}
+    $X \rightarrow Y \in F^{A}$ tramite $k \leq n$ assiomi $\Rightarrow X \rightarrow Y \in F^{+}$
+  \end{center}
   \item \textbf{Passo induttivo:} è necessario dimostrare che se $X \rightarrow Y \in F^{A}$ dopo aver applicato $n +1$ assiomi di Armstrong, allora $ X \rightarrow Y \in F^{+}$.\par
   È possibile ritrovarsi in uno dei seguenti tre casi:
   \begin{enumerate}
-    \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di riflessività, allora l'unica possibilità è che:
+    \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di \textbf{riflessività}, allora l'unica possibilità è che:
     \begin{equation}
       X \rightarrow Y \in F^{A} \Leftrightarrow Y \subseteq X \subseteq R
     \end{equation}
@@ -153,7 +150,7 @@ Dato uno schema $R$ e un insieme $F$ di dipendenze funzionali definite su $R$, s
       \forall t_1, t_2 \in r_{1}, t_1[X] = t_2[X] \Rightarrow t_1[Y] = t_2[Y]
     \end{equation}
     da cui ne segue automaticamente che $X \rightarrow Y \in F^{+}$
-    \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di aumento, allora è obbligatoriamente necessario che:
+    \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di \textbf{aumento}, allora è obbligatoriamente necessario che:
     \begin{itemize}
       \item $\exists V, W \subseteq R \, | \, \exists V \rightarrow W \in F_{A}$, ottenuta applicando $j \leq n$ assiomi di Armstrong\\
 
@@ -171,7 +168,7 @@ Dato uno schema $R$ e un insieme $F$ di dipendenze funzionali definite su $R$, s
         \end{center}
         \end{figure}
         \pagebreak
-      \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di transitività, allora è obbligatoriamente necessario che $\exists X \rightarrow Z, Z \rightarrow Y \in F^{A}$, ottenute con $k \leq n$ assiomi di Armstrong, affinché si abbia che:
+      \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di \textbf{transitività}, allora è obbligatoriamente necessario che $\exists X \rightarrow Z, Z \rightarrow Y \in F^{A}$, ottenute con $k \leq n$ assiomi di Armstrong, affinché si abbia che:
       \begin{equation}
         X \rightarrow Z \in F^{A} \lor Z \rightarrow Y \in F^{A} \Rightarrow X \rightarrow Y \in F^{A}
       \end{equation}
