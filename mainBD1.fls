@@ -414,11 +414,11 @@ INPUT ./im/1.png
 INPUT im/1.png
 INPUT ./im/1.png
 INPUT ./im/1.png
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./im/2.png
 INPUT im/2.png
 INPUT ./im/2.png
 INPUT ./im/2.png
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./im/3.png
 INPUT im/3.png
 INPUT ./im/3.png
