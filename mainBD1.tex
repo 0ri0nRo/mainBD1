@@ -17,6 +17,9 @@
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{makecell}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{mathtools}
 
 \setlength{\droptitle}{-5em}   % regola la posizione del titolo
 \pretitle{\begin{center}\LARGE}   % imposta la dimensione della font del titolo
@@ -66,12 +69,9 @@
     \hrulefill
 
 
-    Le fonti sono le Hand Notes del prof tradotte in italiano con l'obiettivo di migliorare la leggibilità.\\
-    \textbf{Nota: è vietata assolutamente la vendita di questo materiale in qualsiasi forma senza il mio consenso.}  
-
-    
+    Le fonti sono le "Hand Notes" del prof. Perelli tradotte in italiano, appunti presi dalle slides della prof. De Marsico ed eventuali e-mail.\\
+    \textbf{Nota: è vietata assolutamente la vendita di questo materiale in qualsiasi forma senza il mio consenso.} 
     \hrulefill
-
     \end{abstract}
   \end{titlepage}
 
@@ -205,12 +205,150 @@ Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y
 
 \pagebreak
 \section{Chiusura di X}
+\texttt{Input}:
+\begin{itemize}
+  \item Relazione $R$
+  \item Dipendenze Funzionali $F$
+  \item Insieme $X \subseteq R$
+\end{itemize}
+\texttt{Output}: $X^{+}$\\
+
+\begin{algorithm}
+  \caption{Closure Algorithm}  
+    \begin{algorithmic}[1]
+  \State $Z \gets X$
+  \State $S \gets \{A \mid \exists Y \rightarrow V \in F, A \in V \land Y \subseteq Z\}$
+  \While{$S \not\subseteq Z$}
+    \State $Z \gets Z \cup S$
+    \State $S \gets \{A \mid \exists Y \rightarrow V \in F, A \in V \land Y \subseteq Z\}$
+  \EndWhile
+  \State \textbf{return} $Z$
+  \end{algorithmic}
+\end{algorithm}
+Tale algoritmo viene eseguito in tempo polinomiale, ossia $On^{k}$
+
+\subsection{Teorema: L'algoritmo computa $X_{F}^{+}$}
+Il teorema calcola correttamente la chiusura di un insieme di attributi X rispetto ad un insieme F di dipendenze funzionali.
+
+\textbf{Dimostrazione}:\par
+Denotiamo:\par
+\begin{equation}
+  Z_{0}, Z_{1}, \dots, Z_{i}, \dots 
+\end{equation}
+\begin{equation}
+  S_{0}, S_{1}, \dots, S_{i}, \dots
+\end{equation}
+Indichiamo con $Z_{0}$ il valore iniiale di $Z (Z_{0} = X)$ e con $Z_{i}$ e $S_{i}$, $i \geq 1$ i valori di $Z$ ed $S$ dopo l'$i$-esima esecuzione del corpo del ciclo, infatti notiamo che $Z_{i} \subseteq Z_{i+1}$, per ogni $i$.\par
+Sia $j$ tale che $S_{j} \subseteq Z_{j}$ (cioè,  $Z_{j}$ è l'output di $Z$ quando l'algoritmo termina); proveremo che:
+\begin{equation}
+  A \in Z_{j} \Leftrightarrow A \in X^{+} 
+\end{equation}
+\begin{itemize}
+  \item Dimostriamo per induzione su $i$ che $Z_{i} \subseteq X^{+}$, per ogni $i$
+  \begin{itemize}
+    \item Caso base dell'induzione: i = 0.\par Poiché  $Z_{0} = X$ e $X \subseteq X^{+}$ si ha $Z_{0} \subseteq X^{+}$
+    
+    \item Induzione: $i > 0$.\par Per l'ipotesi induttiva $Z_{i-1} \subseteq X_{+}$. \par Sia A un attributo in $Z_{i} - Z_{i-1}$ deve esistere una dipendenza $Y \rightarrow V \in F$ tale che $Y \subseteq Z_{i-1}$ e $A \in V$. Poiché $Y \subseteq Z_{i-1}$ per l'ipotesi induttiva si ha che $Y \subseteq X_{+}$ pertanto per il lemma $X \rightarrow Y \in F^{A}$.\par Poiché $X \rightarrow Y \in F^{A}$ e $Y \rightarrow V \in F$ per l'assioma della tansitività si ha $X \rightarrow V \in F^{A}$ e quindi per il lemma, $V \subseteq X^{+}$. Pertanto per ogni $A \in Z_{i} - Z_{i-1}$ si ha $A \in X^{+}$. Da ciò segue per ipotesi induttiva che $Z_{i} \subseteq X^{+}$
+  \end{itemize}
+  \pagebreak
+  \item Dimostriamo ora che $X^{+} \subseteq Z_{i}$:\par
+  \begin{itemize}
+    \item Sia $X \subseteq R$ e sia $r$ istanza di $R(Z_{i}, R-Z_{i})$. 
+    \begin{table}[ht]
+      \centering
+      \begin{tabular}{|c|c|c|c|c|c|}
+      \hline
+      \multicolumn{3}{|c|}{$Z_{i}$} & \multicolumn{3}{c|}{$R - Z_{i}$} \\
+      \hline
+      $A_1$ & $\dots$ & $A_{i}$ & $A_{j}$ & $\dots$  & $A_{n}$ \\
+      \hline
+      $1$ & $\dots$ & $1$ & $1$ & $\dots$  & $1$ \\
+      \hline
+      $1$ & $\dots$ & $1$ & $0$ & $\dots$  & $0$ \\
+      \hline
+      \end{tabular}
+  \end{table}
+
+  dunque tale che per $t_{1}, t_{2} \in r$ si ha:
+  \begin{itemize}
+    \item $t_{1}[Z_{i}] = (1, \dots, 1) = t_{2}[Z_{i}]$
+    \item $t_{1}[R - Z_{i}] = (1, \dots, 1) \neq (0, \dots, 0) = t_{2}[R - Z_{i}]$
+  \end{itemize}
+    \item Notiamo che $\forall V, W \subseteq R$ | $V \rightarrow W \in F$ si ha che:
+    \begin{itemize}
+      \item Se $V \cap (R - Z_i) \neq \emptyset$ (quindi anche se $V \subseteq R - Z_i$) allora $t1[V] \neq t2[V]$, quindi $r$ soddisfa $V \rightarrow W \in F$
+      \item Se invece $V \subseteq Z_i$, allora $W \subseteq S_f$, poiché per come viene calcolato $S_f$, si ha che:\par
+      $V \rightarrow W \in F$, $V \subseteq Z_i$, $B \in W \subseteq R \Rightarrow B \in S_f \Rightarrow W \subseteq S_f$\par
+      e quindi, siccome $S_f \subseteq Z_i$ è la condizione che termina l'algoritmo, allora $W \subseteq S_f \subseteq Z_i$
+      \item Siccome $V, W \subseteq Z_i$, in definitiva si ha che\par $t1, t2 \in r$, $t1[V] = (1, \dots, 1) = t2[V]$ e $t1[W] = (1, \dots, 1) = t2[W]$,\par e quindi $r$ soddisfa $V \rightarrow W \in F$
+    \end{itemize}
+    \item Siccome in entrambi i casi $r$ soddisfa ogni $V \rightarrow W \in F$, allora $r$ è legale.
+    \item A questo punto, dato $A \in X^+$, si ha che $X \rightarrow A \in F^A = F^+$ deve essere soddisfatta da qualsiasi istanza legale di $R$, inclusa $r$ stessa.
+    \item Poiché $X = Z_0 \subseteq Z_i$, ne segue che la dipendenza non può essere soddisfatta a vuoto poiché $t1[X] = t2[X]$. Dunque, l'unica possibilità affinché $X \rightarrow A \in F^+$ sia soddisfatta da $r$ è $A \in Z_i$ in modo che si abbia $t1[A] = t2[A]$.
+    \item Dunque, siccome $A \in X^+ \Rightarrow A \in Z_i$, concludiamo che $X^+ \subseteq Z_i$.
+  
+  \end{itemize}
+\end{itemize}
+
 \pagebreak
-\section{Lemma Chiusura Inclusione}
+\section{Lemma: Inclusione delle chiusure}
+Dato uno schema $R$ e due insiemi $F$ e $G$ di dipendenze funzionali su $R$, si ha che:\par 
+\begin{equation}
+F \subseteq G^+ \Leftrightarrow F^+ \subseteq G^+
+\end{equation}
+\subsection{Dimostrazione}
+\begin{itemize}
+  \item Denotiamo come $G \xrightarrow{\text{A}} F$ la possibilità di ottenere F partendo da G applicando una determinata quantità di assiomi di Armstrong.
+  \item  Ricordando che $G^A$ è l'insieme di tutte le dipendenze funzionali ottenibile applicando assiomi di Armstrong su $G$, allora:\par
+  \begin{equation}
+    G \xrightarrow{\text{A}} F \Leftrightarrow \forall X \rightarrow Y \in F, \text{ si ha } X \rightarrow Y \in G^A = G^+ \Leftrightarrow F \subseteq G^+
+  \end{equation}
+  \item Siccome $F \subseteq G \Leftrightarrow G \xrightarrow{\text{A}} F$, per definizione di $F^A = F^+$ si ha che:
+  \begin{equation}
+    F \subseteq G^+ \Rightarrow G \xrightarrow{\text{A}} F \xrightarrow{\text{A}} F^A = F^+ \Rightarrow F^+ \subseteq G^+
+  \end{equation}
+  \item Viceversa, si ha che $F^+ \subseteq G^+ \Rightarrow F \subseteq F^+ \subseteq G^+$, quindi concludiamo che $F \subseteq G^+ \Leftrightarrow F^+ \subseteq G^+$
+\end{itemize}
+
+
+
+
+
+
+
 \pagebreak
-\section{Chiusura di X in G}
+\section{Chiusura di $X$ in $G$}
 \pagebreak
 \section{Join senza perdita}
+\pagebreak
+\section{Assiomi di Armstrong}
+\pagebreak
+\section{Decomposizione che preserva $F$}
+\subsection{Prima proprietà}
+\subsection{Seconda proprietà}
+\subsection{Terza proprietà}
+\subsection{Definizione $G$}
+\pagebreak
+\section{Hash}
+\pagebreak
+\section{Dimostrazione $\rho$ preserva $F$}
+\pagebreak
+\section{B-tree}
+\pagebreak
+\section{Chiusura di un insieme di attributi}
+\subsection{Algoritmo}
+\subsection{Dimostrazione correttezza}
+\pagebreak
+\section{3NF (per dipendenza transitiva)}
+\pagebreak
+\section{Chiusura di F e primo lemma}
+\pagebreak
+\section{Isam}
+\subsection{Variante Isam con chiavi indice che hanno valore ultimo record}
+\pagebreak
+\section{Altre definizioni da sapere}
+\subsection{Chiave minimale} 
+\subsection{Superchiave}
 
 
 \end{document}
