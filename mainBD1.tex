@@ -22,6 +22,7 @@
 \usepackage{mathtools}
 \usepackage{amssymb}
 
+
 \setlength{\droptitle}{-5em}   % regola la posizione del titolo
 \pretitle{\begin{center}\LARGE}   % imposta la dimensione della font del titolo
 \posttitle{\end{center}}
@@ -336,6 +337,35 @@ F \subseteq G^+ \Leftrightarrow F^+ \subseteq G^+
 
 \pagebreak
 \section{Chiusura di $X$ in $G$}
+Dato uno schema R con decomposizione $\rho$ = $R_1,...,R_k$, dato un insieme $F$ di dipendenze funzionali su $R$ e posto:
+\[ G := \bigcap_{i=0}^{k} \pi_{R_i}(F) \]\par
+preso $X \subseteq R$, il seguente algoritmo calcola $X_G^+$ tramite $F$:
+\begin{algorithm}
+  \caption{Calcolo di $XG^+$ tramite $F$}
+  \begin{algorithmic}[1]
+      \Procedure{CalculateXG}{$R$, $F$, $X$}
+          \State $Z \gets X$
+          \State $S \gets \emptyset$
+          \For{$i \gets 1$ to $k$}
+              \State $S \gets S \cup ((Z \cap R_i)^+_F \cap R_i)$
+          \EndFor
+          \While{$S \not\subseteq Z$}
+              \State $Z \gets Z \cup S$
+              \For{$i \gets 1$ to $k$}
+                  \State $S \gets S \cup ((Z \cap R_i)^+_F \cap R_i)$
+              \EndFor
+          \EndWhile
+          \State $X_G^+ \gets Z$
+          \State \textbf{return} $X_G^+$
+      \EndProcedure
+  \end{algorithmic}
+\end{algorithm}
+
+
+
+
+
+
 \pagebreak
 \section{Join senza perdita}
 \pagebreak
