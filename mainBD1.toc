@@ -18,8 +18,8 @@
 \contentsline {subsection}{\numberline {8.2}Seconda proprietà}{12}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Terza proprietà}{12}{subsection.8.3}%
 \contentsline {subsection}{\numberline {8.4}Definizione $G$}{12}{subsection.8.4}%
-\contentsline {section}{\numberline {9}Hash}{13}{section.9}%
-\contentsline {section}{\numberline {10}Dimostrazione $\rho $ preserva $F$}{14}{section.10}%
+\contentsline {section}{\numberline {9}Dimostrazione $\rho $ preserva $F$}{13}{section.9}%
+\contentsline {section}{\numberline {10}Hash}{14}{section.10}%
 \contentsline {section}{\numberline {11}B-tree}{15}{section.11}%
 \contentsline {section}{\numberline {12}Chiusura di un insieme di attributi}{16}{section.12}%
 \contentsline {subsection}{\numberline {12.1}Algoritmo}{16}{subsection.12.1}%

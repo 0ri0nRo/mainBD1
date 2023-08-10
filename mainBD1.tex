@@ -20,6 +20,7 @@
 \usepackage{algpseudocode}
 \usepackage{algorithm}
 \usepackage{mathtools}
+\usepackage{amssymb}
 
 \setlength{\droptitle}{-5em}   % regola la posizione del titolo
 \pretitle{\begin{center}\LARGE}   % imposta la dimensione della font del titolo
@@ -244,11 +245,27 @@ Sia $j$ tale che $S_{j} \subseteq Z_{j}$ (cioè,  $Z_{j}$ è l'output di $Z$ qua
   A \in Z_{j} \Leftrightarrow A \in X^{+} 
 \end{equation}
 \begin{itemize}
-  \item Dimostriamo per induzione su $i$ che $Z_{i} \subseteq X^{+}$, per ogni $i$
+  \item Dimostriamo per induzione su $i$ che $Z_{f} \subseteq X^{+}$
   \begin{itemize}
-    \item Caso base dell'induzione: i = 0.\par Poiché  $Z_{0} = X$ e $X \subseteq X^{+}$ si ha $Z_{0} \subseteq X^{+}$
+    \item Caso base dell'induzione: i = 0.\par Alla 0-esima iterazione del while (ossia prima di esso) si ha $Z_{0} = X$ e $X \subseteq X^{+}$
+
+    \item Ipotesi induttiva: Per ogni $i \in\mathbb{N}$ si ha che $Z_i \subseteq X^+$
+
+    \item \textbf{Passo induttivo} ($i > 0$):
+    Dato $A \in Z_{i+1} = Z_i \cup S_i$, si ha che $A \in Z_i \lor A \in S_i$. \par 
+    Dunque, si possono verificare due casi:
+    \begin{itemize}
+      \item $\text{Se } A \in Z_i, \text{ allora per ipotesi } A \in Z_i \subseteq X^+.$
+      \item $\text{Se } A \in S_i, \text{ allora } \exists Y \rightarrow V \in F \text{ tale che } A \in V \subseteq R, Y \subseteq Z_i.$\par
+      $\text{Siccome per ipotesi } Z_i \subseteq X^+ \text{ e } Y \subseteq Z_i, \text{ allora } Y \subseteq Z_i \subseteq X^+ \iff X \rightarrow Y \in F^A \text{ e } Y \rightarrow V \in F \implies Y \rightarrow V \in F^A, \text{ quindi per transitività si ha che:}$
+      \begin{equation}
+        X \rightarrow Y, Y \rightarrow V \in F^A \implies X \rightarrow V \in F^A \iff V \subseteq X^+.
+      \end{equation}
+      Dunque,si ha che $A \in V \subseteq X^+$
+      \item $\text{Siccome in entrambi i casi } A \in Z_{i+1} \implies A \in X^+, \text{ allora concludiamo che } Z_{i+1} \subseteq X^+$.
+
+    \end{itemize}
     
-    \item Induzione: $i > 0$.\par Per l'ipotesi induttiva $Z_{i-1} \subseteq X_{+}$. \par Sia A un attributo in $Z_{i} - Z_{i-1}$ deve esistere una dipendenza $Y \rightarrow V \in F$ tale che $Y \subseteq Z_{i-1}$ e $A \in V$. Poiché $Y \subseteq Z_{i-1}$ per l'ipotesi induttiva si ha che $Y \subseteq X_{+}$ pertanto per il lemma $X \rightarrow Y \in F^{A}$.\par Poiché $X \rightarrow Y \in F^{A}$ e $Y \rightarrow V \in F$ per l'assioma della tansitività si ha $X \rightarrow V \in F^{A}$ e quindi per il lemma, $V \subseteq X^{+}$. Pertanto per ogni $A \in Z_{i} - Z_{i-1}$ si ha $A \in X^{+}$. Da ciò segue per ipotesi induttiva che $Z_{i} \subseteq X^{+}$
   \end{itemize}
   \pagebreak
   \item Dimostriamo ora che $X^{+} \subseteq Z_{i}$:\par
@@ -308,6 +325,7 @@ F \subseteq G^+ \Leftrightarrow F^+ \subseteq G^+
     F \subseteq G^+ \Rightarrow G \xrightarrow{\text{A}} F \xrightarrow{\text{A}} F^A = F^+ \Rightarrow F^+ \subseteq G^+
   \end{equation}
   \item Viceversa, si ha che $F^+ \subseteq G^+ \Rightarrow F \subseteq F^+ \subseteq G^+$, quindi concludiamo che $F \subseteq G^+ \Leftrightarrow F^+ \subseteq G^+$
+
 \end{itemize}
 
 
@@ -329,9 +347,9 @@ F \subseteq G^+ \Leftrightarrow F^+ \subseteq G^+
 \subsection{Terza proprietà}
 \subsection{Definizione $G$}
 \pagebreak
-\section{Hash}
-\pagebreak
 \section{Dimostrazione $\rho$ preserva $F$}
+\pagebreak
+\section{Hash}
 \pagebreak
 \section{B-tree}
 \pagebreak
