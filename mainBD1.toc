@@ -17,22 +17,23 @@
 \contentsline {subsection}{\numberline {6.2}Dimostrazione $\pi _{R_i}(m_{\rho }(r)) = \pi _{R_i}(r) \forall R_i \in \rho $}{11}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Dimostrazione $m_{\rho }(m_{\rho }(r)) = m_{\rho }(r)$}{11}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Algoritmo controllo presenza join senza perdita}{12}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Assiomi di Armstrong}{13}{section.7}%
-\contentsline {section}{\numberline {8}Decomposizione che preserva $F$}{14}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Prima proprietà}{14}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Seconda proprietà}{14}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Terza proprietà}{14}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Definizione $G$}{14}{subsection.8.4}%
-\contentsline {section}{\numberline {9}Dimostrazione $\rho $ preserva $F$}{15}{section.9}%
-\contentsline {section}{\numberline {10}Hash}{16}{section.10}%
-\contentsline {section}{\numberline {11}B-tree}{17}{section.11}%
-\contentsline {section}{\numberline {12}Chiusura di un insieme di attributi}{18}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Algoritmo}{18}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}Dimostrazione correttezza}{18}{subsection.12.2}%
-\contentsline {section}{\numberline {13}3NF (per dipendenza transitiva)}{19}{section.13}%
-\contentsline {section}{\numberline {14}Chiusura di F e primo lemma}{20}{section.14}%
-\contentsline {section}{\numberline {15}Isam}{21}{section.15}%
-\contentsline {subsection}{\numberline {15.1}Variante Isam con chiavi indice che hanno valore ultimo record}{21}{subsection.15.1}%
-\contentsline {section}{\numberline {16}Altre definizioni da sapere}{22}{section.16}%
-\contentsline {subsection}{\numberline {16.1}Chiave minimale}{22}{subsection.16.1}%
-\contentsline {subsection}{\numberline {16.2}Superchiave}{22}{subsection.16.2}%
+\contentsline {subsubsection}{\numberline {6.4.1}Commenti sull'algoritmo}{12}{subsubsection.6.4.1}%
+\contentsline {section}{\numberline {7}Assiomi di Armstrong}{14}{section.7}%
+\contentsline {section}{\numberline {8}Decomposizione che preserva $F$}{15}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Prima proprietà}{15}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Seconda proprietà}{15}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Terza proprietà}{15}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Definizione $G$}{15}{subsection.8.4}%
+\contentsline {section}{\numberline {9}Dimostrazione $\rho $ preserva $F$}{16}{section.9}%
+\contentsline {section}{\numberline {10}Hash}{17}{section.10}%
+\contentsline {section}{\numberline {11}B-tree}{18}{section.11}%
+\contentsline {section}{\numberline {12}Chiusura di un insieme di attributi}{19}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Algoritmo}{19}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Dimostrazione correttezza}{19}{subsection.12.2}%
+\contentsline {section}{\numberline {13}3NF (per dipendenza transitiva)}{20}{section.13}%
+\contentsline {section}{\numberline {14}Chiusura di F e primo lemma}{21}{section.14}%
+\contentsline {section}{\numberline {15}Isam}{22}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Variante Isam con chiavi indice che hanno valore ultimo record}{22}{subsection.15.1}%
+\contentsline {section}{\numberline {16}Altre definizioni da sapere}{23}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Chiave minimale}{23}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Superchiave}{23}{subsection.16.2}%

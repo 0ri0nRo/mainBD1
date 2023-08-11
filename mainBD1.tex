@@ -474,7 +474,13 @@ il seguente algoritmo determina se $\rho$ presenta un join senza perdita.
                                       \State $t2[A_j] \gets t1[A_j]$
                                   \Else
                                       \State $t1[A_j] \gets t2[A_j]$
-                               
+                                  \EndIf
+                              \EndFor
+                          \EndIf
+                      \EndFor
+                  \EndFor
+              \EndFor
+          \EndWhile
           \For{$t \in r$}
               \If{$t = ("a", \ldots, "a")$}
                   \State \Return \text{True}
@@ -485,7 +491,18 @@ il seguente algoritmo determina se $\rho$ presenta un join senza perdita.
   \end{algorithmic}
 \end{algorithm}
 
-
+\subsubsection{Commenti sull'algoritmo}
+\begin{itemize}
+    \item L'algoritmo modifica l'istanza di partenza $r$ in modo che tutte le dipendenze di $F$ vengano soddisfatte:
+    \item Ogni volta che l'algoritmo trova due tuple aventi lo stesso valore nel determinante ma valori differenti, quest'ultimo viene modificato in modo che essi siano uguali.
+    \item Nel fare ciò, il simbolo "a" viene considerato prioritario, ovvero "a" non può mai diventare "b", mentre "b" può diventare "a".
+    \item Se due tuple hanno lo stesso valore nel determinante ma valori differenti nel determinato, e solo una delle due tuple ha un valore "a" nel determinato, il valore "b" dell'altra tupla viene cambiato in "a".
+    \item Se due tuple hanno lo stesso valore nel determinante ma valori differenti nel determinato, ma nessuna delle due tuple ha un valore "a" nel determinato, il valore "b" di una delle due tuple viene cambiato in modo che esse abbiano lo stesso valore "b".
+    \item Due valori vengono considerati uguali se sono entrambi "a" (indipendentemente dal pedice che hanno) o se entrambi hanno una "b" con lo stesso identico pedice.
+    \item L'algoritmo termina quando tutte le coppie di tuple soddisfano le dipendenze di $F$.
+    \item Infine, $r$ diventa un'istanza legale di $R$.
+    \item Una volta terminato l'algoritmo, se esiste almeno una tupla avente tutti valori "a" al suo interno, allora $\rho$ presenta un join senza perdita, altrimenti no.
+\end{itemize}
 
 
 
