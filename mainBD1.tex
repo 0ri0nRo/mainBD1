@@ -383,38 +383,51 @@ preso $X \subseteq R$, il seguente algoritmo calcola $X_G^+$ tramite $F$:
       
       A questo punto, abbiamo che:\\
 
-      $A \in ((Z_i \cap R_j)^+_F \cap R_j)$ $\Leftrightarrow$ $A \in (Z_i \cap R_j)^+_F$ e $A \in R_j$ \\ 
+      $A \in ((Z_i \cap R_j)^+_F \cap R_j)$ $\Leftrightarrow$ $A \in (Z_i \cap R_j)^+_F$ $\land$ $A \in R_j$ \\ 
 
       da cui otteniamo che:\\ 
       
-      $A \in (Z_i \cap R_j)^+_F$ $\Leftrightarrow$ $(Z_i \cap R_j) \rightarrow A \in F^+$. \\
+      $A \in (Z_i \cap R_j)^+_F$ $\Leftrightarrow$ $(Z_i \cap R_j) \rightarrow A \in F^A = F^+$. \\
       
-      Dunque, siccome $(Z_i \cap R_j) \subseteq R_j$ $\land$ $A \in R_j$, allora si ha che:
-      \begin{equation}
-        (Z_i \cap R_j) \rightarrow A \in \pi_{R_j}(F) = \{X \rightarrow Y \in F^+ \,|\, XY \in R_j\}
-      \end{equation}
-      
-      
-    Dai quali deduciamo che $(Z_i \cap R_j) \rightarrow A \in \pi_{R_j}(F) \subseteq G \subseteq G^+ = G^A$.
+      Dunque, siccome $(Z_i \cap R_j) \subseteq R_j$ e $A \in R_j$, allora si ha che:\\
 
-    Inoltre, siccome $(Z_i \cap R_j) \subseteq Z_i$ e, per ipotesi induttiva, $Z_i \subseteq X_G+$, otteniamo che $(Z_i \cap R_j) \subseteq Zi \subseteq X_G^+$, implicando quindi che $X \rightarrow (Z_i \cap R_j) \in G^A$.
+        $(Z_i \cap R_j) \rightarrow A \in \pi_{R_j}(F) = \{X \rightarrow Y \in F^+ \,|\, XY \in R_j\}$
+      
+      
+    Dai quali deduciamo che:\\
+
+    $(Z_i \cap R_j) \rightarrow A \in \pi_{R_j}(F) \subseteq G \subseteq G^+ = G^A$.\\
+
+    Inoltre, siccome $(Z_i \cap R_j) \subseteq Z_i$ e, per ipotesi induttiva, $Z_i \subseteq X_G^+$, otteniamo che:\\ 
+    
+    $(Z_i \cap R_j) \subseteq Zi \subseteq X_G^+$ \\
+    
+    implicando quindi che $X \rightarrow (Z_i \cap R_j) \in G^A$.
 
     Infine, per transitività otteniamo che:
     \[ X \rightarrow (Z_i \cap R_j), \, (Z_i \cap R_j) \rightarrow A \in G^A \Rightarrow X \rightarrow A \in G^A \Rightarrow A \in X_G^+ \]
     \end{itemize}  
     \item Dunque, siccome in entrambi i casi si ha $A \in Z_f \Rightarrow A \in X_G^+$, possiamo concludere che $Z_f \subseteq X_G^+$.
 
+  \end{itemize}
 \end{itemize}
-    
-    
-\end{itemize}
-
-
-
-
-
 \pagebreak
+
+
 \section{Join senza perdita}
+
+
+
+
+
+
+
+
+
+
+
+
+
 \pagebreak
 \section{Assiomi di Armstrong}
 \pagebreak
