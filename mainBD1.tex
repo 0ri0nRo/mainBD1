@@ -410,7 +410,17 @@ preso $X \subseteq R$, il seguente algoritmo calcola $X_G^+$ tramite $F$:
     \item Dunque, siccome in entrambi i casi si ha $A \in Z_f \Rightarrow A \in X_G^+$, possiamo concludere che $Z_f \subseteq X_G^+$.
 
   \end{itemize}
+  \item Dimostriamo per induzione che $X_G^+ \subseteq Z_f$\footnote{Dalle slides del Prof "Hand Notes"}:
+  \begin{itemize}
+    \item Osserviamo che $X \subseteq Y \Rightarrow X_F^+ \subseteq Y^+_F$
+    \item Adesso sippiamo che $X = Z_0 \subseteq Z_f$, noi otteniamo che $X_G^+ \subseteq (Z_f)^+_G$. Noi possiamo dimostrare che $Z_f = (Z_f)^+_G$ che prova questo stato. Ovviamente $Z_f \subseteq (Z_f)^+_G$
+    \item Dobbiamo ora dimostrare l'Inclusione. Consideriamo $S_1 = { A | Y \rightarrow V \in G, Y \subseteq Z_f, A \in V }$ e otteniamo per l'esecuizione del primo passo della chiususa dell'algoritmo di $Z_f$ su $G$. Noi abbiamo dimostrare che $S_1 \subseteq Z_f$. Poniamo $A \in S_1$. Questo significa che esiste $Y \rightarrow V \in G$ tale che $Y \subseteq Z_f$ e $A \in V$.
+    \item Adesso per definizione di F, esiste un indice $j$ che $Y, V \subseteq R_j$ che significa $Y \subseteq Z_f \cap R_j$ e $A \in R_j$ e implica che $A \in (Z_j \cap R_j)^+_F \cap R_j$.
+    \item Detto questo $A \in S_f \subseteq Z_f$ 
+  \end{itemize}
 \end{itemize}
+
+Abbiamo dimostrato che \textbf{$Z_f = X_G^+$}
 \pagebreak
 
 
