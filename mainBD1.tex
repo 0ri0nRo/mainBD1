@@ -86,55 +86,48 @@
 
 \section{Lemma della Chiusura}
 Sia $R$ uno schema e sia $F$ un insieme di dipendenze funzionali definite su $R$. Si ha che:\par 
-\begin{equation}
-X \rightarrow Y \in F^{A} \Longleftrightarrow Y \subseteq X^{+}
-\end{equation}
+\[X \rightarrow Y \in F^{A} \Longleftrightarrow Y \subseteq X^{+}\]
 
 \subsection{Dimostrazione $\Rightarrow$}
 
 Dato $X$ $\rightarrow$ $Y \in F^{A}$, per la regola della decomposizione, otteniamo:
-\begin{equation}
-X \rightarrow A \in F^{A}, \quad \forall A \in Y  
-\end{equation} 
+\[X \rightarrow A \in F^{A}, \quad \forall A \in Y\]
+
 e quindi, per definizione di $X^{+}$, otteniamo che: 
-\begin{equation}
-A \in X^{+}, \quad \forall A \in Y  
-\end{equation}
+
+\[A \in X^{+}, \quad \forall A \in Y  \]
+
 che significa: 
-\begin{equation}
-Y \subseteq X^{+}
-\end{equation}
+
+\[Y \subseteq X^{+}\]
+
 
 
 \subsection{Dimostrazione $\Leftarrow$}
 Dato: 
-\begin{equation}
-Y \subseteq X^{+}
-\end{equation}
+\[Y \subseteq X^{+}\]
 si ottiene che: 
-\begin{equation}
-X \rightarrow A \in F^{A} \quad \forall A \in Y
-\end{equation}
+
+\[X \rightarrow A \in F^{A} \quad \forall A \in Y\]
+
 che implica, per la regola dell'unione, che: 
-\begin{equation}
-X \rightarrow Y \in F^{A}
-\end{equation}
+
+\[X \rightarrow Y \in F^{A}\]
+
 
 \pagebreak
 \section{Teorema $F^{+}$ = $F^{A}$}
 
 Dato uno schema $R$ e un insieme $F$ di dipendenze funzionali definite su $R$, si ha che:
-\begin{equation}
-  F^{+} = F^{A}
-\end{equation}
+\[ F^{+} = F^{A}\]
+
 
 \subsection{Dimostrazione $F^{A} \subseteq F^{+}$}
 Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y \in F^{+}$ per induzione con $n$ numero di applicazioni degli assiomi di Armstrong.
 \begin{itemize}
   \item \textbf{Caso base} (n = 0): se $X \rightarrow Y \in F^{A}$ senza aver applicato alcun assioma di Armstrong, allora l'unica possibilità è che:
-  \begin{equation}
-    X \rightarrow Y \in F \subseteq F^{+}
-  \end{equation}
+  \[X \rightarrow Y \in F \subseteq F^{+}\]
+
   \item \textbf{Ipotesi induttiva forte:} ogni dipendenza funzionale in $F^{A}$ ottenuta da $F$
   applicando k $\leq$ n assiomi di Armstrong è anche in $F^{+}$:
   \begin{center}
@@ -144,13 +137,12 @@ Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y
   È possibile ritrovarsi in uno dei seguenti tre casi:
   \begin{enumerate}
     \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di \textbf{riflessività}, allora l'unica possibilità è che:
-    \begin{equation}
-      X \rightarrow Y \in F^{A} \Leftrightarrow Y \subseteq X \subseteq R
-    \end{equation}
+
+    \[X \rightarrow Y \in F^{A} \Leftrightarrow Y \subseteq X \subseteq R\]
+
     Dunque, poiché, $Y \subseteq X \subseteq R$, per ogni istanza legale di $R$ si ha che:
-    \begin{equation}
-      \forall t_1, t_2 \in r_{1}, t_1[X] = t_2[X] \Rightarrow t_1[Y] = t_2[Y]
-    \end{equation}
+
+    \[\forall t_1, t_2 \in r_{1}, t_1[X] = t_2[X] \Rightarrow t_1[Y] = t_2[Y]\]
     da cui ne segue automaticamente che $X \rightarrow Y \in F^{+}$
     \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di \textbf{aumento}, allora è obbligatoriamente necessario che:
     \begin{itemize}
@@ -159,9 +151,8 @@ Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y
       \item $\exists Z \subseteq R \, | \, X := VZ, \, Y := WZ$\\
     \end{itemize}
       Affinché si abbia che:
-      \begin{equation}
-        Z \subseteq R, \, V \rightarrow W \Rightarrow VZ \rightarrow WZ = X \rightarrow Y \in F^{A}
-      \end{equation}
+
+      \[Z \subseteq R, \, V \rightarrow W \Rightarrow VZ \rightarrow WZ = X \rightarrow Y \in F^{A}\]
 
       Siccome per ipotesi induttiva si ha $V \rightarrow W \in F^{A} \Rightarrow V \rightarrow W \in F^{+}$ e siccome $Z \subseteq Z \Rightarrow Z \rightarrow Z \in F^{+}$, si vede facilmente che: 
       \begin{figure}[hbt]
@@ -171,9 +162,9 @@ Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y
         \end{figure}
         \pagebreak
       \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di \textbf{transitività}, allora è obbligatoriamente necessario che $\exists X \rightarrow Z, Z \rightarrow Y \in F^{A}$, ottenute con $k \leq n$ assiomi di Armstrong, affinché si abbia che:
-      \begin{equation}
-        X \rightarrow Z \in F^{A} \lor Z \rightarrow Y \in F^{A} \Rightarrow X \rightarrow Y \in F^{A}
-      \end{equation}
+
+      \[X \rightarrow Z \in F^{A} \lor Z \rightarrow Y \in F^{A} \Rightarrow X \rightarrow Y \in F^{A}\]
+
       Siccome per ipotesi induttiva $X \rightarrow Z \in F^{A} \Rightarrow X \rightarrow Z \in F^{+}$ e $Z \rightarrow Y \in F^{A} \Rightarrow Z \rightarrow Y \in F^{+}$, si vede facilmente che:
       \begin{figure}[hbt]
         \begin{center}
@@ -234,17 +225,14 @@ Il teorema calcola correttamente la chiusura di un insieme di attributi X rispet
 
 \textbf{Dimostrazione}:\par
 Denotiamo:\par
-\begin{equation}
-  Z_{0}, Z_{1}, \dots, Z_{i}, \dots 
-\end{equation}
-\begin{equation}
-  S_{0}, S_{1}, \dots, S_{i}, \dots
-\end{equation}
+
+\[Z_{0}, Z_{1}, \dots, Z_{i}, \dots \]
+\[S_{0}, S_{1}, \dots, S_{i}, \dots\]
+
 Indichiamo con $Z_{0}$ il valore iniiale di $Z (Z_{0} = X)$ e con $Z_{i}$ e $S_{i}$, $i \geq 1$ i valori di $Z$ ed $S$ dopo l'$i$-esima esecuzione del corpo del ciclo, infatti notiamo che $Z_{i} \subseteq Z_{i+1}$, per ogni $i$.\par
 Sia $j$ tale che $S_{j} \subseteq Z_{j}$ (cioè,  $Z_{j}$ è l'output di $Z$ quando l'algoritmo termina); proveremo che:
-\begin{equation}
-  A \in Z_{j} \Leftrightarrow A \in X^{+} 
-\end{equation}
+
+\[A \in Z_{j} \Leftrightarrow A \in X^{+} \]
 \begin{itemize}
   \item Dimostriamo per induzione su $i$ che $Z_{f} \subseteq X^{+}$
   \begin{itemize}
@@ -259,9 +247,8 @@ Sia $j$ tale che $S_{j} \subseteq Z_{j}$ (cioè,  $Z_{j}$ è l'output di $Z$ qua
       \item $\text{Se } A \in Z_i, \text{ allora per ipotesi } A \in Z_i \subseteq X^+.$
       \item $\text{Se } A \in S_i, \text{ allora } \exists Y \rightarrow V \in F \text{ tale che } A \in V \subseteq R, Y \subseteq Z_i.$\par
       $\text{Siccome per ipotesi } Z_i \subseteq X^+ \text{ e } Y \subseteq Z_i, \text{ allora } Y \subseteq Z_i \subseteq X^+ \iff X \rightarrow Y \in F^A \text{ e } Y \rightarrow V \in F \implies Y \rightarrow V \in F^A, \text{ quindi per transitività si ha che:}$
-      \begin{equation}
-        X \rightarrow Y, Y \rightarrow V \in F^A \implies X \rightarrow V \in F^A \iff V \subseteq X^+.
-      \end{equation}
+
+      \[X \rightarrow Y, Y \rightarrow V \in F^A \implies X \rightarrow V \in F^A \iff V \subseteq X^+\]
       Dunque,si ha che $A \in V \subseteq X^+$
       \item $\text{Siccome in entrambi i casi } A \in Z_{i+1} \implies A \in X^+, \text{ allora concludiamo che } Z_{i+1} \subseteq X^+$.
 
@@ -311,20 +298,19 @@ Sia $j$ tale che $S_{j} \subseteq Z_{j}$ (cioè,  $Z_{j}$ è l'output di $Z$ qua
 \pagebreak
 \section{Lemma: Inclusione delle chiusure}
 Dato uno schema $R$ e due insiemi $F$ e $G$ di dipendenze funzionali su $R$, si ha che:\par 
-\begin{equation}
-F \subseteq G^+ \Leftrightarrow F^+ \subseteq G^+
-\end{equation}
+
+\[F \subseteq G^+ \Leftrightarrow F^+ \subseteq G^+\]
+
 \subsection{Dimostrazione}
 \begin{itemize}
   \item Denotiamo come $G \xrightarrow{\text{A}} F$ la possibilità di ottenere F partendo da G applicando una determinata quantità di assiomi di Armstrong.
   \item  Ricordando che $G^A$ è l'insieme di tutte le dipendenze funzionali ottenibile applicando assiomi di Armstrong su $G$, allora:\par
-  \begin{equation}
-    G \xrightarrow{\text{A}} F \Leftrightarrow \forall X \rightarrow Y \in F, \text{ si ha } X \rightarrow Y \in G^A = G^+ \Leftrightarrow F \subseteq G^+
-  \end{equation}
+
+  \[G \xrightarrow{\text{A}} F \Leftrightarrow \forall X \rightarrow Y \in F, \text{ si ha } X \rightarrow Y \in G^A = G^+ \Leftrightarrow F \subseteq G^+\]
+
   \item Siccome $F \subseteq G \Leftrightarrow G \xrightarrow{\text{A}} F$, per definizione di $F^A = F^+$ si ha che:
-  \begin{equation}
-    F \subseteq G^+ \Rightarrow G \xrightarrow{\text{A}} F \xrightarrow{\text{A}} F^A = F^+ \Rightarrow F^+ \subseteq G^+
-  \end{equation}
+
+  \[F \subseteq G^+ \Rightarrow G \xrightarrow{\text{A}} F \xrightarrow{\text{A}} F^A = F^+ \Rightarrow F^+ \subseteq G^+\]
   \item Viceversa, si ha che $F^+ \subseteq G^+ \Rightarrow F \subseteq F^+ \subseteq G^+$, quindi concludiamo che $F \subseteq G^+ \Leftrightarrow F^+ \subseteq G^+$
 
 \end{itemize}
@@ -425,14 +411,79 @@ Abbiamo dimostrato che \textbf{$Z_f = X_G^+$}
 
 
 \section{Join senza perdita}
+\textbf{Teorema}
+Sia $R$ uno schema con decomposizione $\rho = R_1, \ldots, R_k$ e sia $F$ un insieme di dipendenze funzionali su $R$. La decomposizione $\rho$ presenta un join senza perdita se per ogni istanza legale $r$ di $R$ si ha che:
+\[ r = m_{\rho}(r) := \pi_{R_1}(r) \bowtie \ldots \bowtie \pi_{R_k}(r) \]
+
+Sia $R$ uno schema con decomposizione $\rho = R_1, \ldots, R_k$ e sia $F$ un insieme di dipendenze funzionali su $R$. Posto $m_{\rho}(r) := \pi_{R_1}(r) \bowtie \ldots \bowtie \pi_{R_k}(r)$, per ogni istanza legale $r$ di $R$ si ha che:
+
+\begin{enumerate}
+  \item $r \subseteq m_{\rho}(r)$
+  \item $\pi_{R_i}(m_{\rho}(r)) = \pi_{R_i}(r)$, per ogni $R_i \in \rho$
+  \item $m_{\rho}(m_{\rho}(r)) = m_{\rho}(r)$
+\end{enumerate}
+\subsection{Dimostrazione $r \subseteq m_{\rho}(r)$}
+Data una qualsiasi tupla $t \in r$, si ha che:
+\[ t \in r \Rightarrow t \in \{t[R_1]\} \bowtie \ldots \bowtie \{t[R_k]\} \subseteq \pi_{R_1}(r) \bowtie \ldots \bowtie \pi_{R_k}(r) = m_{\rho}(r) \]
+dunque $r \subseteq m_{\rho}(r)$.
+\subsection{Dimostrazione  $\pi_{R_i}(m_{\rho}(r)) = \pi_{R_i}(r) \forall R_i \in \rho$}
+
+Poiché $r \subseteq m_{\rho}(r)$, allora effettuando una proiezione con $R_i \in \rho$ su entrambe, ne segue che $\pi_{R_i}(r) \subseteq \pi_{R_i}(m_{\rho}(r))$.
+
+Inoltre, per definizione di proiezione, si ha che:
+\[ t \in \pi_{R_i}(m_{\rho}(r)) \Rightarrow \exists t' \in m_{\rho}(r) \text{ tale che } t_{R_i} = t^{'}[R_i] \]
+
+Infine, per definizione stessa di $m_{\rho}(r)$, si ha che:
+\[ t' \in m_{\rho}(r) \Rightarrow \exists t_1, \ldots, t_k \in r \text{ tale che } \forall R_j \in \rho, t_j[R_j] = t^{'}[R_j] \]
+
+In particolare, quindi, otteniamo che:
+\[ t_{R_i} \in \pi_{R_1}(m_{\rho}(r)) \Rightarrow t_{R_i} = t^{'}[R_i] = t_i[R_i] \in \pi_{R_i}(r) \Rightarrow \pi_{R_1}(m_{\rho}(r)) \subseteq \pi_{R_i}(r) \]
+
+\subsection{Dimostrazione $m_{\rho}(m_{\rho}(r)) = m_{\rho}(r)$}
+Siccome $\pi_{R_i}(r) = \pi_{R_1}(m_{\rho}(r))$, allora si ha che:
+\[ m_{\rho}(m_{\rho}(r)) = \pi_{R_1}(m_{\rho}(r)) \bowtie \ldots \bowtie \pi_{R_k}(m_{\rho}(r)) = \pi_{R_1}(r) \bowtie \ldots \bowtie \pi_{R_k}(r) = m_{\rho}(r) \]
+
+\pagebreak
+
+\subsection{Algoritmo controllo presenza join senza perdita}
+Dato uno schema $R = A_1, \ldots, A_n$ con decomposizione $\rho = R_1, \ldots, R_k$ e un insieme $F$ di dipendenze funzionali su $R$, presa l'istanza legale $r$ di $R$ dove per ogni $i \in [1, k]$ e per ogni $j \in [1, n]$ si ha:
 
 
-
-
-
-
-
-
+Un sistema di equazioni con l'ambiente \texttt{cases}:
+\[r_{i, j}
+\begin{cases}
+    "a" \quad se A_j \in R \\
+    "b_i" \quad se A_j \notin R
+\end{cases}
+\]
+il seguente algoritmo determina se $\rho$ presenta un join senza perdita.
+\begin{algorithm}
+  \caption{Verifica se $\rho$ ha un join senza perdita}
+  \begin{algorithmic}[1]
+      \Function{HasLosslessJoin}{$R, F, \rho$}
+          \State $unchanged \gets \text{False}$
+          \While{not $unchanged$}
+              \State $unchanged \gets \text{True}$
+              \For{$X \rightarrow Y \in F$}
+                  \For{t1 in r}
+                      \For{t2 in r}
+                          \If{$t1[X] = t2[X]$ \textbf{and} $t1[Y] \neq t2[Y]$}
+                              \State $unchanged \gets \text{False}$
+                              \For{$A_j \in Y$}
+                                  \If{$t1[A_j] = "a"$}
+                                      \State $t2[A_j] \gets t1[A_j]$
+                                  \Else
+                                      \State $t1[A_j] \gets t2[A_j]$
+                               
+          \For{$t \in r$}
+              \If{$t = ("a", \ldots, "a")$}
+                  \State \Return \text{True}
+              \EndIf
+          \EndFor
+          \State \Return \text{False}
+      \EndFunction
+  \end{algorithmic}
+\end{algorithm}
 
 
 
