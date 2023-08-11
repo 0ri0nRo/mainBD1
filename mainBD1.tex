@@ -341,9 +341,9 @@ Dato uno schema R con decomposizione $\rho$ = $R_1,...,R_k$, dato un insieme $F$
 \[ G := \bigcap_{i=0}^{k} \pi_{R_i}(F) \]\par
 preso $X \subseteq R$, il seguente algoritmo calcola $X_G^+$ tramite $F$:
 \begin{algorithm}
-  \caption{Calcolo di $XG^+$ tramite $F$}
+  \caption{Calcolo di $X_G^+$ tramite $F$}
   \begin{algorithmic}[1]
-      \Procedure{CalculateXG}{$R$, $F$, $X$}
+      \Procedure{Calculate$X_G^+$}{$R$: schema, $F$: set of dependencies, $X$: set of attributes}
           \State $Z \gets X$
           \State $S \gets \emptyset$
           \For{$i \gets 1$ to $k$}
@@ -361,6 +361,53 @@ preso $X \subseteq R$, il seguente algoritmo calcola $X_G^+$ tramite $F$:
   \end{algorithmic}
 \end{algorithm}
 
+\subsection{Dimostrazione}
+\begin{itemize}
+  \item Siano $Z_0,Z_1, \dots,Z_i, \dots$ e $S_0,S_1,\dots ,S_i,\dots$ gli insiemi calcolati ad ogni iterazione del ciclo while dell'algoritmo
+  \item Osserviamo che $Z_i \subseteq Z_{i+1}$ per ogni $i \in \mathbb{N}$, dunque $Z_0, Z_1, \ldots, Z_i, \ldots$ è una sequenza monotona limitata da $R$, implicando che esiste un $f \in \mathbb{N}$ tale che $Z_f = Z_{f+1}$
+  \item Siccome ciò può accadere solo se $S_f \subseteq Z_f$, ossia quando l'algoritmo termina, si ha che $Z_f$ è l'output dell'algoritmo
+  \item Dimostriamo per induzione che $Z_f \subseteq X_G^+$:
+  \begin{itemize}
+    \item \textbf{Caso base ($i = 0$):} \\
+    Alla 0-esima iterazione del \texttt{while}, prima di esso, si ha $Z_0 = X \subseteq X_G^+$.
+    
+    \item \textbf{Ipotesi induttiva:} \\
+    Per ogni $i \in \mathbb{N}$ si ha che $Z_i \subseteq X_G^+$.
+    
+    \item \textbf{Passo induttivo ($i > 0$):} \\
+    Dato $A \in Z_{i+1} = Z_i \cup S_i$, abbiamo che $A \in Z_i$ oppure $A \in S_i$. Quindi possiamo considerare due casi:
+    
+    \begin{itemize}
+      \item Se $A \in Z_i$, allora per ipotesi induttiva abbiamo che $A \in Z_i \subseteq X_G^+$.
+      \item Se $A \in S_i$, allora per la definizione stessa di $S_i$, $\exists$ $j \leq k$ tale che $A \in ((Z_i \cap R_j)^+_F \cap R_j)$.\\
+      
+      A questo punto, abbiamo che:\\
+
+      $A \in ((Z_i \cap R_j)^+_F \cap R_j)$ $\Leftrightarrow$ $A \in (Z_i \cap R_j)^+_F$ e $A \in R_j$ \\ 
+
+      da cui otteniamo che:\\ 
+      
+      $A \in (Z_i \cap R_j)^+_F$ $\Leftrightarrow$ $(Z_i \cap R_j) \rightarrow A \in F^+$. \\
+      
+      Dunque, siccome $(Z_i \cap R_j) \subseteq R_j$ $\land$ $A \in R_j$, allora si ha che:
+      \begin{equation}
+        (Z_i \cap R_j) \rightarrow A \in \pi_{R_j}(F) = \{X \rightarrow Y \in F^+ \,|\, XY \in R_j\}
+      \end{equation}
+      
+      
+    Dai quali deduciamo che $(Z_i \cap R_j) \rightarrow A \in \pi_{R_j}(F) \subseteq G \subseteq G^+ = G^A$.
+
+    Inoltre, siccome $(Z_i \cap R_j) \subseteq Z_i$ e, per ipotesi induttiva, $Z_i \subseteq X_G+$, otteniamo che $(Z_i \cap R_j) \subseteq Zi \subseteq X_G^+$, implicando quindi che $X \rightarrow (Z_i \cap R_j) \in G^A$.
+
+    Infine, per transitività otteniamo che:
+    \[ X \rightarrow (Z_i \cap R_j), \, (Z_i \cap R_j) \rightarrow A \in G^A \Rightarrow X \rightarrow A \in G^A \Rightarrow A \in X_G^+ \]
+    \end{itemize}  
+    \item Dunque, siccome in entrambi i casi si ha $A \in Z_f \Rightarrow A \in X_G^+$, possiamo concludere che $Z_f \subseteq X_G^+$.
+
+\end{itemize}
+    
+    
+\end{itemize}
 
 
 
