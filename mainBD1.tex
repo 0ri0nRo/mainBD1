@@ -493,7 +493,7 @@ il seguente algoritmo determina se $\rho$ presenta un join senza perdita.
 
 \subsubsection{Commenti sull'algoritmo}
 \begin{itemize}
-    \item L'algoritmo modifica l'istanza di partenza $r$ in modo che tutte le dipendenze di $F$ vengano soddisfatte:
+    \item L'algoritmo modifica l'istanza di partenza $r$ in modo che tutte le dipendenze di $F$ vengano soddisfatte
     \item Ogni volta che l'algoritmo trova due tuple aventi lo stesso valore nel determinante ma valori differenti, quest'ultimo viene modificato in modo che essi siano uguali.
     \item Nel fare ciò, il simbolo "a" viene considerato prioritario, ovvero "a" non può mai diventare "b", mentre "b" può diventare "a".
     \item Se due tuple hanno lo stesso valore nel determinante ma valori differenti nel determinato, e solo una delle due tuple ha un valore "a" nel determinato, il valore "b" dell'altra tupla viene cambiato in "a".
