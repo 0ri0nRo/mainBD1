@@ -396,7 +396,7 @@ preso $X \subseteq R$, il seguente algoritmo calcola $X_G^+$ tramite $F$:
     \item Dunque, siccome in entrambi i casi si ha $A \in Z_f \Rightarrow A \in X_G^+$, possiamo concludere che $Z_f \subseteq X_G^+$.
 
   \end{itemize}
-  \item Dimostriamo per induzione che $X_G^+ \subseteq Z_f$\footnote{Dalle slides del Prof "Hand Notes"}:
+  \item Dimostriamo per induzione che $X_G^+ \subseteq Z_f$\footnote{Dalle slides del Prof "Hand Notes" che \textbf{NON} sono oggetto di orale}:
   \begin{itemize}
     \item Osserviamo che $X \subseteq Y \Rightarrow X_F^+ \subseteq Y^+_F$
     \item Adesso sippiamo che $X = Z_0 \subseteq Z_f$, noi otteniamo che $X_G^+ \subseteq (Z_f)^+_G$. Noi possiamo dimostrare che $Z_f = (Z_f)^+_G$ che prova questo stato. Ovviamente $Z_f \subseteq (Z_f)^+_G$
@@ -508,33 +508,51 @@ il seguente algoritmo determina se $\rho$ presenta un join senza perdita.
 
 \pagebreak
 \section{Assiomi di Armstrong}
+Denotiamo con $F^A$ l'insieme di dipendenze funzionali definito nel modo seguente:
+
+\begin{itemize}
+  \item Se $f\in F$, allora $f\in F^A$.
+  \item Se $Y\subseteq X\subseteq R$, allora $X\to Y\in F^A$ (\textbf{assioma della riflessività}).
+  \item Se $X\to Y\in F^A$ e $Z\subseteq R$, allora $XZ\to YZ\in F^A$ (\textbf{assioma dell'aumento}).
+  \item Se $X\to Y\in F^A$ e $Y\to Z\in F^A$, allora $X\to Z\in F^A$ (\textbf{assioma della transitività}).
+\end{itemize}
+
+Introduciamo altre tre regole conseguenza degli assiomi che consentono di derivare da dipendenze \par funzionali $F^A$ altre dipendenze funzionali in $F^A$:
+
+\begin{itemize}
+  \item Se $X\to Y\in F^A$ e $X\to Z\in F^A$, allora $X \to YZ\in F^A$ (\textbf{regola dell'unione}).
+  \item Se $X\to Y\in F^A$ e $Z\subseteq Y$, allora $X \to Z\in F^A$ (\textbf{regola della decomposizione}).
+  \item Se $X\to Y\in F^A$ e $WY\to Z\in F^A$, allora $WX\to Z\in F^A$ (\textbf{regola della pseudotransitività}).
+\end{itemize}
 \pagebreak
-\section{Decomposizione che preserva $F$}
-\subsection{Prima proprietà}
-\subsection{Seconda proprietà}
-\subsection{Terza proprietà}
-\subsection{Definizione $G$}
-\pagebreak
-\section{Dimostrazione $\rho$ preserva $F$}
-\pagebreak
-\section{Hash}
-\pagebreak
-\section{B-tree}
-\pagebreak
-\section{Chiusura di un insieme di attributi}
-\subsection{Algoritmo}
-\subsection{Dimostrazione correttezza}
-\pagebreak
-\section{3NF (per dipendenza transitiva)}
-\pagebreak
-\section{Chiusura di F e primo lemma}
-\pagebreak
-\section{Isam}
-\subsection{Variante Isam con chiavi indice che hanno valore ultimo record}
-\pagebreak
-\section{Altre definizioni da sapere}
-\subsection{Chiave minimale} 
-\subsection{Superchiave}
+
+
+%\section{Decomposizione che preserva $F$}
+%Dato uno schema $R$ e un insieme di dipendenze funzionali $F$, $R$ è in 3NF se e solo se non ci sono attributi che dipendono parzialmente o transitivamente da una chiave.
+
+
+
+%\pagebreak
+%\section{Dimostrazione $\rho$ preserva $F$}
+%\pagebreak
+%\section{Hash}
+%\pagebreak
+%\section{B-tree}
+%\pagebreak
+%\section{Chiusura di un insieme di attributi}
+%\subsection{Algoritmo}
+%\subsection{Dimostrazione correttezza}
+%\pagebreak
+%\section{3NF (per dipendenza transitiva)}
+%\pagebreak
+%\section{Chiusura di F e primo lemma}
+%\pagebreak
+%\section{Isam}
+%\subsection{Variante Isam con chiavi indice che hanno valore ultimo record}
+%\pagebreak
+%\section{Altre definizioni da sapere}
+%\subsection{Chiave minimale} 
+%\subsection{Superchiave}
 
 
 \end{document}
