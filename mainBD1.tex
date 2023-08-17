@@ -323,7 +323,7 @@ Dato uno schema $R$ e due insiemi $F$ e $G$ di dipendenze funzionali su $R$, si 
 \pagebreak
 \section{Chiusura di $X$ in $G$}
 Dato uno schema R con decomposizione $\rho$ = $R_1,...,R_k$, dato un insieme $F$ di dipendenze funzionali su $R$ e posto:
-\[ G := \bigcap_{i=0}^{k} \pi_{R_i}(F) \]\par
+\[ G := \bigcup_{i=0}^{k} \pi_{R_i}(F) \]\par
 preso $X \subseteq R$, il seguente algoritmo calcola $X_G^+$ tramite $F$:
 \begin{algorithm}
   \caption{Calcolo di $X_G^+$ tramite $F$}
