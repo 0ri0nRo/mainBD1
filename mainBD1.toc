@@ -19,3 +19,9 @@
 \contentsline {subsection}{\numberline {6.4}Algoritmo controllo presenza join senza perdita}{12}{subsection.6.4}%
 \contentsline {subsubsection}{\numberline {6.4.1}Commenti sull'algoritmo}{12}{subsubsection.6.4.1}%
 \contentsline {section}{\numberline {7}Assiomi di Armstrong}{14}{section.7}%
+\contentsline {section}{\numberline {8}Formulario}{15}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Organizzazione con file Heap}{15}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Organizzazione con file Sequenziali}{15}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Organizzazione con file Hash}{15}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Organizzazione con file indicizzati sequenziali (ISAM)}{15}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Organizzazione con B-Tree}{15}{subsection.8.5}%
