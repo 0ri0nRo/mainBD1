@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1692611611 "/Users/alex/Desktop/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" "mainBD1.pdf" "mainBD1" 1692611612 0
-  "/Users/alex/Desktop/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" 1692611611 27108 7dc20a253c2ca5733804710163f724c0 ""
+["pdflatex"] 1692613164 "/Users/alex/Desktop/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" "mainBD1.pdf" "mainBD1" 1692613166 0
+  "/Users/alex/Desktop/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" 1692613163 27267 105634cdf600af3d043ae232b194c5c4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -41,6 +41,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
@@ -206,10 +207,10 @@
   "im/3.png" 1691313336 109157 f7c44a7b06370486168b1bebae5056ae ""
   "im/4.png" 1691313356 117654 b542607ff651dff42915747b4b3d70f4 ""
   "im/logo_sapienza_new.png" 1685377046 230566 cb057c2f7633fce546392e6407721b5c ""
-  "mainBD1.aux" 1692611612 5133 61d290fef1f45210febe3af030eea367 "pdflatex"
-  "mainBD1.out" 1692611612 5741 6ffa3fb4493a5bae76ea01c2bbbfbf49 "pdflatex"
-  "mainBD1.tex" 1692611611 27108 7dc20a253c2ca5733804710163f724c0 ""
-  "mainBD1.toc" 1692611612 2809 8d7ab63229c92822331e738f7b89c864 "pdflatex"
+  "mainBD1.aux" 1692613166 5256 05fc2b0aff4a01b934e8a5512b30bd72 "pdflatex"
+  "mainBD1.out" 1692613166 5824 f61b6704ac0b4233e4e142f1adb75423 "pdflatex"
+  "mainBD1.tex" 1692613163 27267 105634cdf600af3d043ae232b194c5c4 ""
+  "mainBD1.toc" 1692613166 2891 a1cee5dc642e2c4bb683d9bbcb471ab0 "pdflatex"
   (generated)
   "mainBD1.aux"
   "mainBD1.log"
