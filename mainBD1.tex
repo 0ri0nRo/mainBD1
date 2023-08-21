@@ -529,29 +529,30 @@ Introduciamo altre tre regole conseguenza degli assiomi che consentono di deriva
 \end{itemize}
 \pagebreak
 
-\section{Formulario}
-\subsection{Organizzazione con file Heap}
+\section{Definizioni utili}
+\subsubsection{Cos'è una dipendenza funzionale?}
+Una dipendenza funzionale su una relazione $R$ è una coppia ordinata di sottoinsiemi di $R$ e viene denotata con $X \rightarrow Y$.\\
 
-È il modello di organizzazione dei file primaria più basilare:
+\subsubsection{Cos'è la chiusura di un insieme di dipendenze funzionali?}
+La chiusura di un insieme di dipendenze funzionali è l'insieme di dipendenze funzionali soddisfatte da ogni istanza legale di $R$, essa viene denotata con $F^+$.\\
+
+\subsubsection{Quali sono le caratteristiche di una chiave per una relazione?}
+Un sottoinsieme $K$ di $R$ è chiave per $R$ se è un insieme minimale che determina $R$. Ovvero se $K \rightarrow R$ appartiene a $F^+$ e non esiste un $K'$ sottoinsieme di $K$ tale che $K' \rightarrow R$ appartiene a $F^+$.\\
+
+\subsubsection{Cos'è un attributo primo?}
+Un attributo si dice primo se appartiene a una chiave di $R$.\\
+
+\subsubsection{Cos'è un superchiave?}
+Un sottoinsieme $X$ di $R$ è una superchiave se contiene una chiave di $R$.\\
+
+\subsubsection{Cosa sono le dipendenze parziali e le dipendenze transitive?}
+Una dipendenza $X \rightarrow A$ in $F^+$ si dice parziale se $A$ non è primo e $X$ è contenuto propriamente in una chiave. Una dipendenza $X \rightarrow A$ in $F^+$ si dice transitiva se $A$ non è primo ed $X$ non è contenuto in nessuna chiave $K$ in $R$ e $K - X \neq \emptyset$.\\
+
+\subsubsection{Quando è che una relazione è in 3NF? (Dimostra l'equivalenza tra le due affermazioni)}
 \begin{itemize}
-    \item I nuovi record vengono inseriti alla fine del file.
-    \item Non vi è relazione tra gli attributi dei record e la loro locazione fisica.
-    \item L'unica opzione per il recupero dei record è la ricerca lineare (ossia controllando sequenzialmente ogni record).
-    \item Ad ogni record è associata una chiave di ricerca che lo identifica.
-    \item Per un file con $N$ blocchi, il tempo medio impiegato per trovare un record in base alla sua chiave univoca di ricerca è $\lceil \frac{N}{2}\rceil $ SBA.
-    \item Cercare record in base a chiavi di ricerca non univoche richiede la lettura dell'intero file, in modo da selezionare il record giusto.
+  \item Una relazione $R$ è in 3NF se per ogni dipendenza funzionale $X \rightarrow A$ in $F^+$ si ha che $A$ è primo oppure $X$ è una superchiave. \item Una relazione $R$ è in 3NF se in $F^+$ non ci sono né dipendenze \textbf{transitive} né dipendenze \textbf{parziali}.\\
 \end{itemize}
-
-
-\subsection{Organizzazione con file Sequenziali}
-
-
-\subsection{Organizzazione con file Hash}
-\subsection{Organizzazione con file indicizzati sequenziali (ISAM)}
-\subsection{Organizzazione con B-Tree}
-
-
-
+  
 
 
 
