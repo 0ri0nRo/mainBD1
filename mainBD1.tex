@@ -146,7 +146,7 @@ Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y
     da cui ne segue automaticamente che $X \rightarrow Y \in F^{+}$
     \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di \textbf{aumento}, allora è obbligatoriamente necessario che:
     \begin{itemize}
-      \item $\exists V, W \subseteq R \, | \, \exists V \rightarrow W \in F_{A}$, ottenuta applicando $j \leq n$ assiomi di Armstrong\\
+      \item $\exists V, W \subseteq R \, | \, \exists V \rightarrow W \in F^{A}$, ottenuta applicando $j \leq n$ assiomi di Armstrong\\
 
       \item $\exists Z \subseteq R \, | \, X := VZ, \, Y := WZ$\\
     \end{itemize}
@@ -161,9 +161,9 @@ Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y
         \end{center}
         \end{figure}
         \pagebreak
-      \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di \textbf{transitività}, allora è obbligatoriamente necessario che $\exists X \rightarrow Z, Z \rightarrow Y \in F^{A}$, ottenute con $k \leq n$ assiomi di Armstrong, affinché si abbia che:
+      \item Se l'$(n + 1)$-esimo assioma applicato è l'assioma di \textbf{transitività}, allora è obbligatoriamente necessario che $\exists X \rightarrow Z, Z \rightarrow Y \in F^{A}$, ottenute con $k \leq n$ assiomi di Armstrong.
 
-      \[X \rightarrow Z \in F^{A} \lor Z \rightarrow Y \in F^{A} \Rightarrow X \rightarrow Y \in F^{A}\]
+      %\[X \rightarrow Z \in F^{A} \lor Z \rightarrow Y \in F^{A} \Rightarrow X \rightarrow Y \in F^{A}\]
 
       Siccome per ipotesi induttiva $X \rightarrow Z \in F^{A} \Rightarrow X \rightarrow Z \in F^{+}$ e $Z \rightarrow Y \in F^{A} \Rightarrow Z \rightarrow Y \in F^{+}$, si vede facilmente che:
       \begin{figure}[hbt]
@@ -554,7 +554,7 @@ Una dipendenza $X \rightarrow A$ in $F^+$ si dice parziale se $A$ non è primo e
 \end{itemize}
 
 \subsubsection{$F^A$}
-Definiamo come $F^A$ l'insieme di tutte le dipendenze funzionali ottenibili partendo da $F$ applicando i seguenti assiomi di Armstrong.
+Definiamo come $F^A$ l'insieme di tutte le dipendenze funzionali ottenibili assioma di aumento partendo da $F$ applicando i seguenti assiomi di Armstrong.
   
 
 
