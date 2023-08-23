@@ -25,10 +25,11 @@
 \contentsline {subsubsection}{\numberline {8.0.3}Quali sono le caratteristiche di una chiave per una relazione?}{15}{subsubsection.8.0.3}%
 \contentsline {subsubsection}{\numberline {8.0.4}Cos'è un attributo primo?}{15}{subsubsection.8.0.4}%
 \contentsline {subsubsection}{\numberline {8.0.5}Cos'è un superchiave?}{15}{subsubsection.8.0.5}%
-\contentsline {subsubsection}{\numberline {8.0.6}Chiave Minimale}{15}{subsubsection.8.0.6}%
-\contentsline {subsubsection}{\numberline {8.0.7}Cosa sono le dipendenze parziali e le dipendenze transitive?}{15}{subsubsection.8.0.7}%
-\contentsline {subsubsection}{\numberline {8.0.8}Quando è che una relazione è in 3NF? (Dimostra l'equivalenza tra le due affermazioni)}{15}{subsubsection.8.0.8}%
-\contentsline {subsubsection}{\numberline {8.0.9}$F^A$}{15}{subsubsection.8.0.9}%
-\contentsline {subsection}{\numberline {8.1}ISAM}{15}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Hash}{15}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}B-Tree}{15}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.0.6}Chiave Minimale (chiave primaria)}{15}{subsubsection.8.0.6}%
+\contentsline {subsubsection}{\numberline {8.0.7}Cos'è una copertura minimale di un insieme di dipendenze funzionali?}{15}{subsubsection.8.0.7}%
+\contentsline {subsubsection}{\numberline {8.0.8}Cosa sono le dipendenze parziali e le dipendenze transitive?}{15}{subsubsection.8.0.8}%
+\contentsline {subsubsection}{\numberline {8.0.9}Quando è che una relazione è in 3NF? (Dimostra l'equivalenza tra le due affermazioni)}{16}{subsubsection.8.0.9}%
+\contentsline {subsubsection}{\numberline {8.0.10}$F^A$}{16}{subsubsection.8.0.10}%
+\contentsline {subsection}{\numberline {8.1}ISAM}{16}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Hash}{16}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}B-Tree}{16}{subsection.8.3}%

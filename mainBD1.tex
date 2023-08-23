@@ -545,7 +545,21 @@ Un attributo si dice primo se appartiene a una chiave di $R$.\\
 \subsubsection{Cos'è un superchiave?}
 Un sottoinsieme $X$ di $R$ è una superchiave se contiene una chiave di $R$.\\
 
-\subsubsection{Chiave Minimale}
+\subsubsection{Chiave Minimale (chiave primaria)}
+Una chiave minimale, anche nota come chiave primaria, è un insieme di attributi (colonne) all'interno di una tabella (relazione) che può essere utilizzato per identificare univocamente ogni riga all'interno di quella tabella.
+\begin{itemize}
+  \item \textbf{Unicità}: Ogni valore nell'insieme di attributi deve essere unico all'interno della tabella. Non possono esistere due righe con lo stesso valore per l'insieme di attributi che costituisce la chiave minimale.
+  \item \textbf{Irreducibilità}: Nessun sottoinsieme dell'insieme di attributi può conservare la proprietà di unicità. Questo significa che se si rimuove un qualsiasi attributo dall'insieme di attributi della chiave, la capacità di identificare univocamente le righe viene persa.
+\end{itemize}
+
+\subsubsection{Cos'è una copertura minimale di un insieme di dipendenze funzionali?}
+Una copertura minimale di un insieme di dipendenze F è un insieme di dipendenze nel quale:
+\begin{itemize}
+  \item Ogni dipendenza funzionale ha la parte sinistra che è un singleton
+  \item Ogni dipendenza funzionale ha la parte sinistra non ridondante
+  \item Non sono presenti dipendenze funzionali ridondanti
+\end{itemize}
+
 
 
 \subsubsection{Cosa sono le dipendenze parziali e le dipendenze transitive?}
