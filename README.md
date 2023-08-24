@@ -39,20 +39,6 @@ Scaricalo da [qui](mainBD1.pdf)
 
 - B-tree
 
-## La gestione della concorrenza
-- Transazioni.
-
-- Schedule seriale.
-
-- Serializzabilità.
-
-- Modelli di transazioni e meccanismi di locking.
-
-- Livelock e deadlock.
-
-- Protocolli a due fasi.
-
-- Protocolli conservativi e aggressivi.
 
 - Dati “sporchi”.
 
