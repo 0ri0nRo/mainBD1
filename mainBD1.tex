@@ -581,8 +581,66 @@ Una dipendenza $X \rightarrow A$ in $F^+$ si dice parziale se $A$ non è primo e
 \subsubsection{$F^A$}
 Definiamo come $F^A$ l'insieme di tutte le dipendenze funzionali ottenibili assioma di aumento partendo da $F$ applicando i seguenti assiomi di Armstrong.
 
+\subsection{Organizzazione con file Heap}
+\begin{itemize}
+  \item È il modello di organizzazione dei file primaria più basilare
+  \item I nuovi record vengono inseriti alla fine del file
+  \item Non vi è relazione tra gli attributi dei record e la loro locazione fisica
+  \item L'unica opzione per il recupero dei record è la ricerca lineare(ossia controllando sequenzialmente ogni record)
+  \item Ad ogni record è associata una chiave di ricerca che lo identifica
+  \item Per un file con N blocchi, il tempo medio impiegato per trovare un record
+  in base alla sua chiave univoca di ricerca è $\lceil \frac{N}{2} \rceil$
+  \item Cercare record in base a chiavi di ricerca non univoche richiede la lettura dell'intero file, in modo da selezionare il record giusto
+\end{itemize}
+\subsection{Organizzazione con file Sequenziali}
+\begin{itemize}
+  \item I record vengono archiviati in ordine crescente (o discendente) in base al valore della loro chiave di ricerca
+  \item Essendo i record ordinati in base alla loro chiave di ricerca, viene utilizzata la ricerca binaria, rendendo il numero atteso di accessi ai blocchi necessari per recuperare un record pari a $\lceil \log_2(N) \rceil
+  $ RBA, poiché i blocchi su cui si accede non sono sequenziali per natura stessa dell'algoritmo di ricerca binaria.
+  \item Può essere utilizzata anche la ricerca lineare, rendendo il numero atteso di accessi ai blocchi necessari per recuperare un record pari a $\lceil \frac{N}{2} \rceil$ SBA, risultando tuttavia meno efficiente.
+  \item Aggiornare i file sequenziali è più laborioso rispetto all'aggiornamento di un file heap, poiché richiede il riordinamento delle chiavi. Per tale motivo, spesso vengono fatti più aggiornamenti simultaneamente
+\end{itemize}
+
+\subsection{Organizzazione con file hash}
+\begin{itemize}
+  \item Viene utilizzato un algoritmo di hashing per effettuare una conversione da chiave all'indirizzo fisico dove il record è archiviato
+  \item Risulta più efficiente quando viene utilizzata una chiave primaria
+  \item Poiché viene utilizzata una funzione di hash, non è garantito che tutte le chiavi vengano mappate a valori hash diversi, per via delle possibili collisioni, dunque vengono utilizzati dei "recipienti", detti bucket, che contengono tutti i record il cui hash generato coincide.
+  \item Viene mantenuta salvata in memoria principale una bucket directory, ossia un insieme di record dove ogni entrata corrisponde ad un puntatore al primo blocco di un bucket associato. Ogni entrata è indicizzata da un valore assumibile dalla funzione di hash.
+  \item L'algoritmo di hashing deve distribuire i record il più possibile in modo uniforme, spesso realizzata tramite l'operatore modulo (ad esempio address(key$_i$) = key$_i$ \textit{mod} M)
+  
+\end{itemize}
+Se si ha una quantità di record mappati allo stesso bucket maggiore della capienza stabilita per il bucket stesso, allora il record viene considerato in overflow. La tecnica più utilizzata per la gestione degli overflow è la tecnica di indirizzamento aperto, dove gli overflow vengono archiviati nel primo slot disponibile. 
+L'efficienza dell'algoritmo di hash utilizzato è misurata in base al numero atteso di RBA e di SBA:\footnote{\textbf{RBA (Relative Block Address)}: L'indirizzo relativo del blocco fa riferimento alla posizione di un blocco di dati all'interno di un dispositivo di archiviazione. Questo indirizzo è relativo al blocco di partenza o ad un punto di riferimento, spesso indicato come "blocco base". In altre parole, l'RBA ti dice quanto è distante il blocco di dati dal blocco base. Quando si accede ai dati, è necessario calcolare l'RBA per determinare la posizione esatta del blocco che si desidera recuperare.
+
+\textbf{SBA (Sequential Block Address)}: L'indirizzo sequenziale del blocco fa riferimento all'indirizzo del blocco successivo in sequenza rispetto a quello corrente. Questo è particolarmente rilevante quando si accede a dati archiviati in modo sequenziale su un dispositivo di archiviazione, come ad esempio quando i record sono memorizzati uno dopo l'altro in un blocco. L'SBA è utilizzato per spostarsi in modo efficiente attraverso i dati archiviati in sequenza.}
+\begin{itemize}
+  \item Recuperare un record non in overflow richiede un singolo RBA per rag- giungere l'indirizzo del primo blocco del bucket, ottenuto dall'algoritmo di hash, per poi (potenzialmente) eseguire uno o più SBA, poiché i record nello stesso bucket sono archiviati in modo sequenziale
+  \item Recuperare un record in overflow richiede accessi ai blocchi aggiuntivi in base alla percentuale di record in overflow, dipendente dalla tecnica di hashing utilizzata, e in base alla tecnica adottata per gestirli
+\end{itemize}
+  
+
 \subsection{ISAM}
-\subsection{Hash}
+\begin{itemize}
+  \item Il file principale contenente i record è diviso in partizioni, ognuna corrispondente ad un blocco, ognuna rappresentata da un'entrata $<$Chiave di ricerca primo record, Puntatore indirizzo fisico primo record$>$, le quali vengono archiviate in un file indice.
+  \item Il file principale e il file indice sono entrambi ordinati in base alle chiavi di ricerca presenti nelle loro entrate
+  \item Il file indice può essere di tipo denso, dove esiste un'entrata per ogni possibile valore della chiave di ricerca, o di tipo sparso, dove esiste solo l'entrata del primo record di ogni partizione, implicando quindi che ogni entrata faccia riferimento ad un gruppo di record
+\end{itemize}
+Dato un numero di blocchi del file principale pari a NBFP ed un numero di blocchi del file indice pari a NBFI, l'efficienza delle ricerche risulta essere:
+\begin{itemize}
+  \item Ricerca lineare sul file principale: NB$_FP$ SBA
+  \item Ricerca binaria sul file principale: $\lceil \log_2(NB_{FP}) \rceil
+  $ RBA
+  \item Ricerca binaria tramite file indice: $\lceil \log_2(NB_{FI}) \rceil
+  $ + 1 RBA, dove l'ultimo RBA è dovuto all'accesso al blocco dell'entrata trovata
+\end{itemize}
+Effettuando la ricerca binaria sul file indice, se k è la chiave del record che si sta cercando, a e b sono gli estremi dell'intervallo di chiavi del file indice che si sta considerando attualmente e m è il valore medio di tale intervallo, allora:
+\begin{itemize}
+  \item Se k $<$ m allora l'algoritmo controllerà l'insieme di chiavi compreso tra [a, m - 1], poiché la chiave k sicuramente non si trova all'interno del blocco m
+  \item Se k = m allora l'algoritmo selezionerà tale blocco
+  \item Se k $>$ m allora l'algoritmo controllerà l'insieme di chiavi compreso tra [m, b], poiché la chiave k potrebbe essere all'interno del blocco m
+\end{itemize}
+
 \subsection{B-Tree}
 \subsubsection{B$^+$-Tree}
 

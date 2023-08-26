@@ -30,7 +30,9 @@
 \contentsline {subsubsection}{\numberline {8.0.8}Cosa sono le dipendenze parziali e le dipendenze transitive?}{16}{subsubsection.8.0.8}%
 \contentsline {subsubsection}{\numberline {8.0.9}Quando è che una relazione è in 3NF? (Dimostra l'equivalenza tra le due affermazioni)}{17}{subsubsection.8.0.9}%
 \contentsline {subsubsection}{\numberline {8.0.10}$F^A$}{17}{subsubsection.8.0.10}%
-\contentsline {subsection}{\numberline {8.1}ISAM}{17}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Hash}{17}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}B-Tree}{17}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}B$^+$-Tree}{17}{subsubsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.1}Organizzazione con file Heap}{17}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Organizzazione con file Sequenziali}{17}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Organizzazione con file hash}{17}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}ISAM}{18}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}B-Tree}{18}{subsection.8.5}%
+\contentsline {subsubsection}{\numberline {8.5.1}B$^+$-Tree}{18}{subsubsection.8.5.1}%
