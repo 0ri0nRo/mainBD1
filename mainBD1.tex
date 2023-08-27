@@ -231,10 +231,10 @@ Il teorema calcola correttamente la chiusura di un insieme di attributi X rispet
 \textbf{Dimostrazione}:\par
 Denotiamo:\par
 
-\[Z_{0}, Z_{1}, \dots, Z_{i}, \dots \]
+\[Z_{0}, Z_{1}, \dots, Z_{f}, \dots \]
 \[S_{0}, S_{1}, \dots, S_{i}, \dots\]
 
-Indichiamo con $Z_{0}$ il valore iniiale di $Z (Z_{0} = X)$ e con $Z_{i}$ e $S_{i}$, $i \geq 1$ i valori di $Z$ ed $S$ dopo l'$i$-esima esecuzione del corpo del ciclo, infatti notiamo che $Z_{i} \subseteq Z_{i+1}$, per ogni $i$.\par
+Indichiamo con $Z_{0}$ il valore iniiale di $Z (Z_{0} = X)$ e con $Z_{f}$ e $S_{i}$, $i \geq 1$ i valori di $Z$ ed $S$ dopo l'$i$-esima esecuzione del corpo del ciclo, infatti notiamo che $Z_{f} \subseteq Z_{i+1}$, per ogni $i$.\par
 Sia $j$ tale che $S_{j} \subseteq Z_{j}$ (cioè,  $Z_{j}$ è l'output di $Z$ quando l'algoritmo termina); proveremo che:
 
 \[A \in Z_{j} \Leftrightarrow A \in X^{+} \]
@@ -261,14 +261,14 @@ Sia $j$ tale che $S_{j} \subseteq Z_{j}$ (cioè,  $Z_{j}$ è l'output di $Z$ qua
     
   \end{itemize}
   \pagebreak
-  \item Dimostriamo ora che $X^{+} \subseteq Z_{i}$:\par
+  \item Dimostriamo ora che $X^{+} \subseteq Z_{f}$:\par
   \begin{itemize}
-    \item Sia $X \subseteq R$ e sia $r$ istanza di $R(Z_{i}, R-Z_{i})$. 
+    \item Sia $X \subseteq R$ e sia $r$ istanza di $R(Z_{f}, R-Z_{f})$. 
     \begin{table}[ht]
       \centering
       \begin{tabular}{|c|c|c|c|c|c|}
       \hline
-      \multicolumn{3}{|c|}{$Z_{i}$} & \multicolumn{3}{c|}{$R - Z_{i}$} \\
+      \multicolumn{3}{|c|}{$Z_{f}$} & \multicolumn{3}{c|}{$R - Z_{f}$} \\
       \hline
       $A_1$ & $\dots$ & $A_{i}$ & $A_{j}$ & $\dots$  & $A_{n}$ \\
       \hline
@@ -281,8 +281,8 @@ Sia $j$ tale che $S_{j} \subseteq Z_{j}$ (cioè,  $Z_{j}$ è l'output di $Z$ qua
 
   dunque tale che per $t_{1}, t_{2} \in r$ si ha:
   \begin{itemize}
-    \item $t_{1}[Z_{i}] = (1, \dots, 1) = t_{2}[Z_{i}]$
-    \item $t_{1}[R - Z_{i}] = (1, \dots, 1) \neq (0, \dots, 0) = t_{2}[R - Z_{i}]$
+    \item $t_{1}[Z_{f}] = (1, \dots, 1) = t_{2}[Z_{f}]$
+    \item $t_{1}[R - Z_{f}] = (1, \dots, 1) \neq (0, \dots, 0) = t_{2}[R - Z_{f}]$
   \end{itemize}
     \item Notiamo che $\forall V, W \subseteq R$ | $V \rightarrow W \in F$ si ha che:
     \begin{itemize}
