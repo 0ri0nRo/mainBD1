@@ -550,8 +550,21 @@ Un sottoinsieme $K$ di $R$ è chiave per $R$ se è un insieme minimale che deter
 \subsubsection{Cos'è un attributo primo?}
 Un attributo si dice primo se appartiene a una chiave di $R$.\\
 
+Sia $R$ uno schema e sia $F$ un insieme di dipendenze funzionali definite su $R$. Definiamo il sottoinsieme di attributi $K \subseteq R$ come chiave di $R$ se:
+\begin{itemize}
+    \item $K \rightarrow R \in F^+$
+    \item $\nexists K' \subset K \,|\, K' \rightarrow R \in F^+$
+\end{itemize}
+Se $K$ è una chiave di $R$, ogni attributo $A \in K$ viene detto primo.
+
 \subsubsection{Cos'è un superchiave?}
 Un sottoinsieme $X$ di $R$ è una superchiave se contiene una chiave di $R$.\\
+
+Sia $R$ uno schema e sia $F$ un insieme di dipendenze funzionali definite su $R$. Definiamo il sottoinsieme di attributi $K \subseteq R$ come superchiave di $R$ se:
+\begin{itemize}
+    \item $K \rightarrow R \in F^+$
+    \item $\exists K' \subseteq K \,|\, K' \rightarrow R \in F^+ \land \nexists K'' \subset K' \,|\, K'' \rightarrow R \in F^+$ (ossia contiene una chiave)
+\end{itemize}
 
 \subsubsection{Chiave Minimale (chiave primaria)}
 Una chiave minimale, anche nota come chiave primaria, è un insieme di attributi (colonne) all'interno di una tabella (relazione) che può essere utilizzato per identificare univocamente ogni riga all'interno di quella tabella.
@@ -572,6 +585,14 @@ Una copertura minimale di un insieme di dipendenze F è un insieme di dipendenze
 
 \subsubsection{Cosa sono le dipendenze parziali e le dipendenze transitive?}
 Una dipendenza $X \rightarrow A$ in $F^+$ si dice parziale se $A$ non è primo e $X$ è contenuto propriamente in una chiave. Una dipendenza $X \rightarrow A$ in $F^+$ si dice transitiva se $A$ non è primo ed $X$ non è contenuto in nessuna chiave $K$ in $R$ e $K - X \neq \emptyset$.\\
+
+\subsubsection{Terza Forma Normale (3NF)}
+Sia R uno schema e sia F un insieme di dipendenze funzionali definite su R. Lo schema R viene detto in terza forma normale (3NF) se:
+
+\[\forall X \rightarrow A \in F^+, \, A \in R - X, \, \exists K \subseteq R \text{chiave} \,|\, K \subseteq X \vee A \in K\]
+
+In altre parole, uno schema viene detto in terza forma normale se per ogni dipendenza funzionale non banale $X \rightarrow A \in F^+$, il determinante X è superchiave o il determinato A è primo.
+Se uno schema è in 3NF, la quantità di anomalie e di ridondanze dei dati è estremamente ridotta.
 
 \subsubsection{Quando è che una relazione è in 3NF? (Dimostra l'equivalenza tra le due affermazioni)}
 \begin{itemize}
