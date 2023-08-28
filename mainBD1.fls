@@ -521,6 +521,10 @@ INPUT ./im/FA=F+.jpg
 INPUT ./im/FA=F+.jpg
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT ./im/X.jpg
+INPUT im/X.jpg
+INPUT ./im/X.jpg
+INPUT ./im/X.jpg
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
