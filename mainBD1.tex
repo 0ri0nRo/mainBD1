@@ -288,13 +288,17 @@ Sia $j$ tale che $S_{j} \subseteq Z_{j}$ (cioè,  $Z_{j}$ è l'output di $Z$ qua
     \item $t_{1}[Z_{i}] = (1, \dots, 1) = t_{2}[Z_{i}]$
     \item $t_{1}[R - Z_{i}] = (1, \dots, 1) \neq (0, \dots, 0) = t_{2}[R - Z_{i}]$
   \end{itemize}
-    \item Notiamo che $\forall V, W \subseteq R$ | $V \rightarrow W \in F$ si ha che:
+    \item Notiamo che $\forall \ V, W \subseteq R$ $|$ $V \rightarrow W \in F$ si ha che:
     \begin{itemize}
       \item Se $V \cap (R - Z_i) \neq \emptyset$ (quindi anche se $V \subseteq R - Z_i$) allora $t1[V] \neq t2[V]$, quindi $r$ soddisfa $V \rightarrow W \in F$
       \item Se invece $V \subseteq Z_i$, allora $W \subseteq S_f$, poiché per come viene calcolato $S_f$, si ha che:\par
-      $V \rightarrow W \in F$, $V \subseteq Z_i$, $B \in W \subseteq R \Rightarrow B \in S_f \Rightarrow W \subseteq S_f$\par
+
+      \[ V \rightarrow W \in F, V \subseteq Z_i, \ B \in W \subseteq R \Rightarrow B \in S_f \Rightarrow W \subseteq S_f \]
+
       e quindi, siccome $S_f \subseteq Z_i$ è la condizione che termina l'algoritmo, allora $W \subseteq S_f \subseteq Z_i$
-      \item Siccome $V, W \subseteq Z_i$, in definitiva si ha che\par $t1, t2 \in r$, $t1[V] = (1, \dots, 1) = t2[V]$ e $t1[W] = (1, \dots, 1) = t2[W]$,\par e quindi $r$ soddisfa $V \rightarrow W \in F$
+      \item Siccome $V, W \subseteq Z_i$, in definitiva si ha che:\par 
+      \[t1, t2 \in r, t1[V] = (1, \dots, 1) = t2[V]\  \text{e} \ t1[W] = (1, \dots, 1) = t2[W]\]
+      \par e quindi $r$ soddisfa $V \rightarrow W \in F$
     \end{itemize}
     \item Siccome in entrambi i casi $r$ soddisfa ogni $V \rightarrow W \in F$, allora $r$ è legale.
     \item A questo punto, dato $A \in X^+$, si ha che $X \rightarrow A \in F^A = F^+$ deve essere soddisfatta da qualsiasi istanza legale di $R$, inclusa $r$ stessa.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.21)  28 AUG 2023 19:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.21)  28 AUG 2023 19:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -719,27 +719,19 @@ italian.ldf    See the documentation concerning the babel-italian typesetting
 italian.ldf    on input line 40.
 
 Package hyperref Info: Link coloring OFF on input line 40.
-(./mainBD1.out) (./mainBD1.out)
 \@outlinefile=\write4
 \openout4 = `mainBD1.out'.
 
 \c@lstlisting=\count344
-<im/logo_sapienza_new.png, id=155, 2569.6pt x 769.87625pt>
+<im/logo_sapienza_new.png, id=7, 2569.6pt x 769.87625pt>
 File: im/logo_sapienza_new.png Graphic file (type png)
 <use im/logo_sapienza_new.png>
 Package pdftex.def Info: im/logo_sapienza_new.png  used on input line 56.
 (pdftex.def)             Requested size: 338.58632pt x 101.43837pt.
- [1
+[1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./im/logo_sapienza_new.png>] (./mainBD1.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./im/logo_sapienza_new.png>]
+No file mainBD1.toc.
 \tf@toc=\write5
 \openout5 = `mainBD1.toc'.
 
@@ -749,6 +741,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.85 
       [1]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 91.
@@ -828,7 +828,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-<im/1.png, id=222, 497.86pt x 101.37875pt>
+<im/1.png, id=37, 497.86pt x 101.37875pt>
 File: im/1.png Graphic file (type png)
 <use im/1.png>
 Package pdftex.def Info: im/1.png  used on input line 160.
@@ -841,7 +841,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.0123pt}.
 
 [3{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./im/1.png>]
-<im/2.png, id=233, 446.66875pt x 99.37125pt>
+<im/2.png, id=51, 446.66875pt x 99.37125pt>
 File: im/2.png Graphic file (type png)
 <use im/2.png>
 Package pdftex.def Info: im/2.png  used on input line 171.
@@ -875,17 +875,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 180.
 
-<im/3.png, id=241, 503.8825pt x 375.4025pt>
+<im/3.png, id=59, 503.8825pt x 375.4025pt>
 File: im/3.png Graphic file (type png)
 <use im/3.png>
 Package pdftex.def Info: im/3.png  used on input line 183.
 (pdftex.def)             Requested size: 362.77264pt x 270.2724pt.
-<im/4.png, id=242, 519.9425pt x 309.155pt>
+<im/4.png, id=60, 519.9425pt x 309.155pt>
 File: im/4.png Graphic file (type png)
 <use im/4.png>
 Package pdftex.def Info: im/4.png  used on input line 188.
 (pdftex.def)             Requested size: 386.95897pt x 230.08252pt.
-<im/FA=F+.jpg, id=243, 2190.1825pt x 3097.5725pt>
+<im/FA=F+.jpg, id=61, 2190.1825pt x 3097.5725pt>
 File: im/FA=F+.jpg Graphic file (type jpg)
 <use im/FA=F+.jpg>
 Package pdftex.def Info: im/FA=F+.jpg  used on input line 197.
@@ -928,6 +928,25 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 228.
 
 [7]
+/Users/alex/Desktop/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex:296: Display math should end with $$.
+<to be read again> 
+                   ,
+l.296       \[ V \rightarrow W \in F$,
+                                       $V \subseteq Z_i$, $B \in W \subseteq...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+/Users/alex/Desktop/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex:296: Missing $ inserted.
+<inserted text> 
+                $
+l.296 ... B \in S_f \Rightarrow W \subseteq S_f \]
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.21115pt, for example:
@@ -938,19 +957,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8] [9]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 341.
+(hyperref)                removing `math shift' on input line 339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 341.
+(hyperref)                removing `math shift' on input line 339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 341.
+(hyperref)                removing `math shift' on input line 339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 341.
+(hyperref)                removing `math shift' on input line 339.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+
+ []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 384--385
@@ -978,16 +1002,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 392--393
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
 
  []
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
@@ -997,206 +1021,210 @@ Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
-
- []
-
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 430--432
+Underfull \hbox (badness 10000) in paragraph at lines 428--430
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 444.
+(hyperref)                removing `math shift' on input line 442.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\subseteq' on input line 444.
+(hyperref)                removing `\subseteq' on input line 442.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 444.
+(hyperref)                removing `subscript' on input line 442.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 444.
+(hyperref)                removing `\rho' on input line 442.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 444.
+(hyperref)                removing `math shift' on input line 442.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 448.
+(hyperref)                removing `math shift' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pi' on input line 448.
+(hyperref)                removing `\pi' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 448.
+(hyperref)                removing `subscript' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 448.
+(hyperref)                removing `subscript' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 448.
+(hyperref)                removing `subscript' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 448.
+(hyperref)                removing `\rho' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pi' on input line 448.
+(hyperref)                removing `\pi' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 448.
+(hyperref)                removing `subscript' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 448.
+(hyperref)                removing `subscript' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\forall' on input line 448.
+(hyperref)                removing `\forall' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 448.
+(hyperref)                removing `subscript' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 448.
+(hyperref)                removing `\in' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 448.
+(hyperref)                removing `\rho' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 448.
+(hyperref)                removing `math shift' on input line 446.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 461.
+(hyperref)                removing `math shift' on input line 459.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 461.
+(hyperref)                removing `subscript' on input line 459.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 461.
+(hyperref)                removing `\rho' on input line 459.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 461.
+(hyperref)                removing `subscript' on input line 459.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 461.
+(hyperref)                removing `\rho' on input line 459.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 461.
+(hyperref)                removing `subscript' on input line 459.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 461.
+(hyperref)                removing `\rho' on input line 459.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 461.
+(hyperref)                removing `math shift' on input line 459.
 
 [12] [13] [14] [15]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 549.
+(hyperref)                than one, level fixed on input line 547.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--551
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 553--554
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
+Underfull \hbox (badness 10000) in paragraph at lines 551--552
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--560
+Underfull \hbox (badness 10000) in paragraph at lines 554--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 562--563
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 588--589
+Underfull \hbox (badness 10000) in paragraph at lines 560--561
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 586--587
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 600--601
+Underfull \hbox (badness 10000) in paragraph at lines 598--599
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 603.
+(hyperref)                removing `math shift' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 603.
+(hyperref)                removing `superscript' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 603.
+(hyperref)                removing `math shift' on input line 601.
 
 [17] [18]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 667.
+(hyperref)                removing `math shift' on input line 665.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 667.
+(hyperref)                removing `superscript' on input line 665.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 667.
+(hyperref)                removing `math shift' on input line 665.
 
 [19] (./mainBD1.aux)
-Package rerunfilecheck Info: File `mainBD1.out' has not changed.
-(rerunfilecheck)             Checksum: 0DBAF8FE3D2F29BCFCF5078E89B2F9B3;7660.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `mainBD1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `mainBD1.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  0DBAF8FE3D2F29BCFCF5078E89B2F9B3;7660.
  ) 
 Here is how much of TeX's memory you used:
- 26726 strings out of 476097
- 488414 string characters out of 5791132
+ 26680 strings out of 476097
+ 487673 string characters out of 5791132
  1870851 words of memory out of 5000000
- 46602 multiletter control sequences out of 15000+600000
+ 46562 multiletter control sequences out of 15000+600000
  527169 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,13n,89p,713b,668s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on mainBD1.pdf (20 pages, 1484306 bytes).
+Output written on mainBD1.pdf (20 pages, 1476227 bytes).
 PDF statistics:
- 464 PDF objects out of 1000 (max. 8388607)
- 375 compressed objects within 4 object streams
+ 314 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
  76 named destinations out of 1000 (max. 500000)
- 339 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
