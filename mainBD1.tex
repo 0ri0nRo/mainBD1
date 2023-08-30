@@ -614,6 +614,13 @@ Se uno schema è in 3NF, la quantità di anomalie e di ridondanze dei dati è es
 \subsubsection{$F^A$}
 Definiamo come $F^A$ l'insieme di tutte le dipendenze funzionali ottenibili assioma di aumento partendo da $F$ applicando i seguenti assiomi di Armstrong.
 
+\subsubsection{Decomposizione che preserva F e Spiegazione}
+Una decomposizione $\rho$ preserva un insieme di dipendenze funzionali $F$ se e solo se $F \equiv G$ dove (definizione di G):
+\[ G := \bigcup_{i=1}^{k} \{X \rightarrow Y \mid X \rightarrow Y \in F^+ \land XY \subseteq R_i \} \]
+
+\textbf{Spiegazione}: Proiettare ogni dipendenza funzionale in $F$ sul sottoschema $R_i$ vuol dire prendere in considerazione tutte e sole le dipendenze derivabili da $F$ (tramite assiomi di Armstrong, quindi $F^+$) che hanno tutti gli attributi in $R_i$
+
+
 \subsection{Organizzazione con file Heap}
 \begin{itemize}
   \item È il modello di organizzazione dei file primaria più basilare
@@ -656,7 +663,7 @@ L'efficienza dell'algoritmo di hash utilizzato è misurata in base al numero att
 \pagebreak
 
 
-\subsection{ISAM}
+\subsection{ISAM (Indexed Sequential Access Method)}
 \begin{itemize}
   \item Il file principale contenente i record è diviso in partizioni, ognuna corrispondente ad un blocco, ognuna rappresentata da un'entrata $<$Chiave di ricerca primo record, Puntatore indirizzo fisico primo record$>$, le quali vengono archiviate in un file indice.
   \item Il file principale e il file indice sono entrambi ordinati in base alle chiavi di ricerca presenti nelle loro entrate
@@ -676,6 +683,9 @@ Effettuando la ricerca binaria sul file indice, se k è la chiave del record che
   \item Se k = m allora l'algoritmo selezionerà tale blocco
   \item Se k $>$ m allora l'algoritmo controllerà l'insieme di chiavi compreso tra [m, b], poiché la chiave k potrebbe essere all'interno del blocco m
 \end{itemize}
+
+\subsubsection{Variante Isam con chiavi indice che hanno valore ultimo record}
+
 
 \pagebreak
 \subsection{B-Tree}

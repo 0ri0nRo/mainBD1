@@ -32,10 +32,12 @@
 \contentsline {subsubsection}{\numberline {8.0.9}Terza Forma Normale (3NF)}{19}{subsubsection.8.0.9}%
 \contentsline {subsubsection}{\numberline {8.0.10}Quando è che una relazione è in 3NF? (Dimostra l'equivalenza tra le due affermazioni)}{19}{subsubsection.8.0.10}%
 \contentsline {subsubsection}{\numberline {8.0.11}$F^A$}{19}{subsubsection.8.0.11}%
+\contentsline {subsubsection}{\numberline {8.0.12}Decomposizione che preserva F e Spiegazione}{19}{subsubsection.8.0.12}%
 \contentsline {subsection}{\numberline {8.1}Organizzazione con file Heap}{19}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Organizzazione con file Sequenziali}{19}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Organizzazione con file hash}{20}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}ISAM}{21}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.4}ISAM (Indexed Sequential Access Method)}{21}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}Variante Isam con chiavi indice che hanno valore ultimo record}{21}{subsubsection.8.4.1}%
 \contentsline {subsection}{\numberline {8.5}B-Tree}{22}{subsection.8.5}%
 \contentsline {subsubsection}{\numberline {8.5.1}Ricerca}{22}{subsubsection.8.5.1}%
 \contentsline {subsubsection}{\numberline {8.5.2}Inserimento}{22}{subsubsection.8.5.2}%
