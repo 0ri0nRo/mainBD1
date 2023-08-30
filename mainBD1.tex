@@ -203,6 +203,12 @@ Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y
 
 \pagebreak
 \section{Chiusura di X}
+\subsubsection{Chiusura di un insieme di attributi}
+Sia $R$ uno schema e sia $F$ un insieme di dipendenze funzionali definite su $R$.\\
+ 
+Dato $X \subseteq R$, definiamo come chiusura di $X$ rispetto a $F$, indicata con $X_F^+$ (o solo $X^+$ se $F$ è l'unico insieme di dipendenze su $R$), il seguente insieme: 
+\[X_F^+ = \{ A \in R \mid X \rightarrow A \in F^A \}\] dove $A \in R$ implica che $A$ sia un singolo attributo di $R$.\\
+
 \texttt{Input}:
 \begin{itemize}
   \item Relazione $R$
@@ -212,7 +218,7 @@ Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y
 \texttt{Output}: $X^{+}$\\
 
 \begin{algorithm}
-  \caption{Closure Algorithm}  
+  \caption{Algoritmo per la chiusura di un insieme di attributi}  
     \begin{algorithmic}[1]
   \State $Z \gets X$
   \State $S \gets \{A \mid \exists Y \rightarrow V \in F, A \in V \land Y \subseteq Z\}$
@@ -226,13 +232,14 @@ Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y
 Tale algoritmo viene eseguito in tempo polinomiale, ossia $On^{k}$
 
 \subsection{Teorema: L'algoritmo computa $X_{F}^{+}$}
-Il teorema calcola correttamente la chiusura di un insieme di attributi X rispetto ad un insieme F di dipendenze funzionali.
+Il teorema calcola correttamente la chiusura di un insieme di attributi X rispetto ad un insieme F di dipendenze funzionali.\\
 
-\textbf{Dimostrazione}:\par
+\textbf{Dimostrazione Correttezza dell'algoritmo}:\\
+
 Denotiamo:\par
 
 \[Z_{0}, Z_{1}, \dots, Z_{i}, \dots \]
-\[S_{0}, S_{1}, \dots, S_{i}, \dots\]
+\[S_{0}, S_{1}, \dots, S_{i}, \dots\]\\
 
 Indichiamo con $Z_{0}$ il valore iniziale di $Z (Z_{0} = X)$ e con $Z_{i}$ e $S_{i}$, $i \geq 1$ i valori di $Z$ ed $S$ dopo l'$i$-esima esecuzione del corpo del ciclo, infatti notiamo che $Z_{i} \subseteq Z_{i+1}$, per ogni $i$.\par
 Sia $j$ tale che $S_{j} \subseteq Z_{j}$ (cioè,  $Z_{j}$ è l'output di $Z$ quando l'algoritmo termina); proveremo che:

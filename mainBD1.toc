@@ -7,39 +7,40 @@
 \contentsline {subsection}{\numberline {2.1}Dimostrazione $F^{A} \subseteq F^{+}$}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Dimostrazione $F^{+} \subseteq F^{A}$}{5}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Chiusura di X}{7}{section.3}%
+\contentsline {subsubsection}{\numberline {3.0.1}Chiusura di un insieme di attributi}{7}{subsubsection.3.0.1}%
 \contentsline {subsection}{\numberline {3.1}Teorema: L'algoritmo computa $X_{F}^{+}$}{7}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Lemma: Inclusione delle chiusure}{10}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Dimostrazione}{10}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Chiusura di $X$ in $G$}{11}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Dimostrazione}{11}{subsection.5.1}%
-\contentsline {section}{\numberline {6}Join senza perdita}{13}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Dimostrazione $r \subseteq m_{\rho }(r)$}{13}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Dimostrazione $\pi _{R_i}(m_{\rho }(r)) = \pi _{R_i}(r) \forall R_i \in \rho $}{13}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Dimostrazione $m_{\rho }(m_{\rho }(r)) = m_{\rho }(r)$}{13}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Algoritmo controllo presenza join senza perdita}{14}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Commenti sull'algoritmo}{15}{subsubsection.6.4.1}%
-\contentsline {section}{\numberline {7}Assiomi di Armstrong}{16}{section.7}%
-\contentsline {section}{\numberline {8}Definizioni utili}{17}{section.8}%
-\contentsline {subsubsection}{\numberline {8.0.1}Cos'è una dipendenza funzionale?}{17}{subsubsection.8.0.1}%
-\contentsline {subsubsection}{\numberline {8.0.2}Cos'è la chiusura di un insieme di dipendenze funzionali?}{17}{subsubsection.8.0.2}%
-\contentsline {subsubsection}{\numberline {8.0.3}Quali sono le caratteristiche di una chiave per una relazione?}{17}{subsubsection.8.0.3}%
-\contentsline {subsubsection}{\numberline {8.0.4}Cos'è un attributo primo?}{17}{subsubsection.8.0.4}%
-\contentsline {subsubsection}{\numberline {8.0.5}Cos'è un superchiave?}{17}{subsubsection.8.0.5}%
-\contentsline {subsubsection}{\numberline {8.0.6}Chiave Minimale (chiave primaria)}{17}{subsubsection.8.0.6}%
-\contentsline {subsubsection}{\numberline {8.0.7}Cos'è una copertura minimale di un insieme di dipendenze funzionali?}{17}{subsubsection.8.0.7}%
-\contentsline {subsubsection}{\numberline {8.0.8}Cosa sono le dipendenze parziali e le dipendenze transitive?}{17}{subsubsection.8.0.8}%
-\contentsline {subsubsection}{\numberline {8.0.9}Terza Forma Normale (3NF)}{18}{subsubsection.8.0.9}%
-\contentsline {subsubsection}{\numberline {8.0.10}Quando è che una relazione è in 3NF? (Dimostra l'equivalenza tra le due affermazioni)}{18}{subsubsection.8.0.10}%
-\contentsline {subsubsection}{\numberline {8.0.11}$F^A$}{18}{subsubsection.8.0.11}%
-\contentsline {subsection}{\numberline {8.1}Organizzazione con file Heap}{18}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Organizzazione con file Sequenziali}{18}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Organizzazione con file hash}{19}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}ISAM}{20}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}B-Tree}{21}{subsection.8.5}%
-\contentsline {subsubsection}{\numberline {8.5.1}Ricerca}{21}{subsubsection.8.5.1}%
-\contentsline {subsubsection}{\numberline {8.5.2}Inserimento}{21}{subsubsection.8.5.2}%
-\contentsline {subsubsection}{\numberline {8.5.3}Cancellazione}{21}{subsubsection.8.5.3}%
-\contentsline {subsubsection}{\numberline {8.5.4}Modifica}{21}{subsubsection.8.5.4}%
-\contentsline {subsubsection}{\numberline {8.5.5}Altezza di un B-Tree}{22}{subsubsection.8.5.5}%
-\contentsline {subsubsection}{\numberline {8.5.6}Performance di un B-Tree}{22}{subsubsection.8.5.6}%
-\contentsline {subsection}{\numberline {8.6}B$^+$-Tree}{22}{subsection.8.6}%
+\contentsline {section}{\numberline {4}Lemma: Inclusione delle chiusure}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Dimostrazione}{11}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Chiusura di $X$ in $G$}{12}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Dimostrazione}{12}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Join senza perdita}{14}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Dimostrazione $r \subseteq m_{\rho }(r)$}{14}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Dimostrazione $\pi _{R_i}(m_{\rho }(r)) = \pi _{R_i}(r) \forall R_i \in \rho $}{14}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Dimostrazione $m_{\rho }(m_{\rho }(r)) = m_{\rho }(r)$}{14}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Algoritmo controllo presenza join senza perdita}{15}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Commenti sull'algoritmo}{16}{subsubsection.6.4.1}%
+\contentsline {section}{\numberline {7}Assiomi di Armstrong}{17}{section.7}%
+\contentsline {section}{\numberline {8}Definizioni utili}{18}{section.8}%
+\contentsline {subsubsection}{\numberline {8.0.1}Cos'è una dipendenza funzionale?}{18}{subsubsection.8.0.1}%
+\contentsline {subsubsection}{\numberline {8.0.2}Cos'è la chiusura di un insieme di dipendenze funzionali?}{18}{subsubsection.8.0.2}%
+\contentsline {subsubsection}{\numberline {8.0.3}Quali sono le caratteristiche di una chiave per una relazione?}{18}{subsubsection.8.0.3}%
+\contentsline {subsubsection}{\numberline {8.0.4}Cos'è un attributo primo?}{18}{subsubsection.8.0.4}%
+\contentsline {subsubsection}{\numberline {8.0.5}Cos'è un superchiave?}{18}{subsubsection.8.0.5}%
+\contentsline {subsubsection}{\numberline {8.0.6}Chiave Minimale (chiave primaria)}{18}{subsubsection.8.0.6}%
+\contentsline {subsubsection}{\numberline {8.0.7}Cos'è una copertura minimale di un insieme di dipendenze funzionali?}{18}{subsubsection.8.0.7}%
+\contentsline {subsubsection}{\numberline {8.0.8}Cosa sono le dipendenze parziali e le dipendenze transitive?}{18}{subsubsection.8.0.8}%
+\contentsline {subsubsection}{\numberline {8.0.9}Terza Forma Normale (3NF)}{19}{subsubsection.8.0.9}%
+\contentsline {subsubsection}{\numberline {8.0.10}Quando è che una relazione è in 3NF? (Dimostra l'equivalenza tra le due affermazioni)}{19}{subsubsection.8.0.10}%
+\contentsline {subsubsection}{\numberline {8.0.11}$F^A$}{19}{subsubsection.8.0.11}%
+\contentsline {subsection}{\numberline {8.1}Organizzazione con file Heap}{19}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Organizzazione con file Sequenziali}{19}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Organizzazione con file hash}{20}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}ISAM}{21}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}B-Tree}{22}{subsection.8.5}%
+\contentsline {subsubsection}{\numberline {8.5.1}Ricerca}{22}{subsubsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.2}Inserimento}{22}{subsubsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.3}Cancellazione}{22}{subsubsection.8.5.3}%
+\contentsline {subsubsection}{\numberline {8.5.4}Modifica}{22}{subsubsection.8.5.4}%
+\contentsline {subsubsection}{\numberline {8.5.5}Altezza di un B-Tree}{23}{subsubsection.8.5.5}%
+\contentsline {subsubsection}{\numberline {8.5.6}Performance di un B-Tree}{23}{subsubsection.8.5.6}%
+\contentsline {subsection}{\numberline {8.6}B$^+$-Tree}{23}{subsection.8.6}%
