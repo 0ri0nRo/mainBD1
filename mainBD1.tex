@@ -203,19 +203,18 @@ Prendiamo $X \rightarrow Y \in F^{A}$, noi dobbiamo provare che $X \rightarrow Y
 
 \pagebreak
 \section{Chiusura di X}
-\subsubsection{Chiusura di un insieme di attributi}
+\subsection{Chiusura di un insieme di attributi}
 Sia $R$ uno schema e sia $F$ un insieme di dipendenze funzionali definite su $R$.\\
  
 Dato $X \subseteq R$, definiamo come chiusura di $X$ rispetto a $F$, indicata con $X_F^+$ (o solo $X^+$ se $F$ è l'unico insieme di dipendenze su $R$), il seguente insieme: 
 \[X_F^+ = \{ A \in R \mid X \rightarrow A \in F^A \}\] dove $A \in R$ implica che $A$ sia un singolo attributo di $R$.\\
-
 \texttt{Input}:
 \begin{itemize}
   \item Relazione $R$
   \item Dipendenze Funzionali $F$
   \item Insieme $X \subseteq R$
 \end{itemize}
-\texttt{Output}: $X^{+}$\\
+\texttt{Output}: $X^{+}$
 
 \begin{algorithm}
   \caption{Algoritmo per la chiusura di un insieme di attributi}  

@@ -7,8 +7,8 @@
 \contentsline {subsection}{\numberline {2.1}Dimostrazione $F^{A} \subseteq F^{+}$}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Dimostrazione $F^{+} \subseteq F^{A}$}{5}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Chiusura di X}{7}{section.3}%
-\contentsline {subsubsection}{\numberline {3.0.1}Chiusura di un insieme di attributi}{7}{subsubsection.3.0.1}%
-\contentsline {subsection}{\numberline {3.1}Teorema: L'algoritmo computa $X_{F}^{+}$}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Chiusura di un insieme di attributi}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Teorema: L'algoritmo computa $X_{F}^{+}$}{7}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Lemma: Inclusione delle chiusure}{11}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Dimostrazione}{11}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Chiusura di $X$ in $G$}{12}{section.5}%
