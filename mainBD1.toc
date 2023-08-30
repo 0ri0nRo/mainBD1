@@ -34,6 +34,12 @@
 \contentsline {subsection}{\numberline {8.1}Organizzazione con file Heap}{18}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Organizzazione con file Sequenziali}{18}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Organizzazione con file hash}{19}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}ISAM}{19}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}B-Tree}{20}{subsection.8.5}%
-\contentsline {subsubsection}{\numberline {8.5.1}B$^+$-Tree}{20}{subsubsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.4}ISAM}{20}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}B-Tree}{21}{subsection.8.5}%
+\contentsline {subsubsection}{\numberline {8.5.1}Ricerca}{21}{subsubsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.2}Inserimento}{21}{subsubsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.3}Cancellazione}{21}{subsubsection.8.5.3}%
+\contentsline {subsubsection}{\numberline {8.5.4}Modifica}{21}{subsubsection.8.5.4}%
+\contentsline {subsubsection}{\numberline {8.5.5}Altezza di un B-Tree}{22}{subsubsection.8.5.5}%
+\contentsline {subsubsection}{\numberline {8.5.6}Performance di un B-Tree}{22}{subsubsection.8.5.6}%
+\contentsline {subsection}{\numberline {8.6}B$^+$-Tree}{22}{subsection.8.6}%

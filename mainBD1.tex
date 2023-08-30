@@ -645,7 +645,10 @@ L'efficienza dell'algoritmo di hash utilizzato è misurata in base al numero att
   \item Recuperare un record non in overflow richiede un singolo RBA per rag- giungere l'indirizzo del primo blocco del bucket, ottenuto dall'algoritmo di hash, per poi (potenzialmente) eseguire uno o più SBA, poiché i record nello stesso bucket sono archiviati in modo sequenziale
   \item Recuperare un record in overflow richiede accessi ai blocchi aggiuntivi in base alla percentuale di record in overflow, dipendente dalla tecnica di hashing utilizzata, e in base alla tecnica adottata per gestirli
 \end{itemize}
-  
+
+
+\pagebreak
+
 
 \subsection{ISAM}
 \begin{itemize}
@@ -668,10 +671,62 @@ Effettuando la ricerca binaria sul file indice, se k è la chiave del record che
   \item Se k $>$ m allora l'algoritmo controllerà l'insieme di chiavi compreso tra [m, b], poiché la chiave k potrebbe essere all'interno del blocco m
 \end{itemize}
 
-\subsection{B-Tree}
-\subsubsection{B$^+$-Tree}
-
 \pagebreak
+\subsection{B-Tree}
+L'organizzazione del file tramite B-Tree è una generalizzazione del file ISAM.In un file B-Tree non si accede ai blocchi del file principale, come nell'ISAM, attraverso un file indice, bensì attraverso una gerarchia di indici. \\
+
+L'indice a livello più alto è costituito da un unico blocco ed è quindi allocato in memoria principale. Durante la ricerca di un record con un dato valore per la chiave si parte dall'indice di livello più alto e, man mano che si scende, si restringe la porzione di blocchi del file principale in cui deve trovarsi il record, fino a che nell'ultimo livello tale porzione è ristretta ad un solo blocco. Per evitare ulteriori passaggi per l'inserimento, la cancellazione e la modifica, i blocchi degli indici e del file principale devono essere sempre pieni almeno per metà.\\
+
+Ogni blocco del file indice è costituito da una coppia $(v,b)$ dove $v$ è il valore della chiave del primo record della porzione del file principale accessibile attraverso il puntatore $b$, il quale punta ad un blocco del file indice a livello immediatamente inferiore o, se è l'indice più basso della gerarchia, ad un blocco del file principale
+
+\subsubsection{Ricerca}
+Per ricercare un record con un valore $v$ per la chiave si procede nella seguente maniera: Si parte dall'indice a livello più alto, il quale è costituito da un solo blocco. Ad ogni passo si esamina un solo blocco. Se esso è del file principale, allora il record ricercato dovrà essere in tale blocco, altrimenti si cerca un valore che ricopra $v$ e si segue il puntatore associato.Ad ogni passo si scende di livello quindi si effettuano al massimo $h$+1 passi, dove $h$ è l'altezza dell'albero.
+
+\subsubsection{Inserimento}
+Il costo dell'inserimento dipende dal fatto che ci sia o meno spazio sufficiente all'interno del blocco.
+
+\begin{itemize}
+    \item Se c'è spazio, il record viene ricercato con un costo di $h+1$ e viene modificato il blocco con un costo di 1, quindi il costo totale è di $h+2$ accessi.
+    \item Se non c'è spazio, il record viene ricercato con un costo di $h+1$. Viene poi chiesto al sistema un nuovo blocco e vengono ripartiti i record del blocco pieno in modo da tenere entrambi i blocchi pieni almeno per metà. Lo stesso discorso va effettuato al blocco indice di livello 1 se esso è pieno, e al livello 2 se anche esso è pieno, e così via. Se tutti i blocchi sono pieni, l'altezza dell'albero aumenterà di uno poiché tutti i blocchi indice, fino alla radice, verranno sdoppiati. Verrà quindi richiesto un ulteriore blocco che farà da nuova radice.
+\end{itemize}
+
+\subsubsection{Cancellazione}
+Anche per la cancellazione, come per l'inserimento, il costo dipende da quanto siano pieni i blocchi:
+
+\begin{itemize}
+    \item Se dopo la cancellazione il blocco rimane pieno almeno per metà, allora il record viene ricercato con un costo di $h+1$ e viene modificato il blocco con un costo di 1. In questo caso, il costo totale è di $h+2$.
+    \item Se dopo la cancellazione il blocco non soddisfa la condizione di essere pieno almeno per metà, si verifica se c'è spazio nei blocchi adiacenti per inserire il contenuto di tale blocco. Lo stesso principio viene applicato ai blocchi indice se essi non rimangono pieni almeno per metà dopo la cancellazione del blocco. Nel caso peggiore, le modifiche riguardano tutti i blocchi fino alla radice, e l'altezza dell'albero può essere diminuita di uno.
+\end{itemize}
+
+\subsubsection{Modifica}
+\begin{itemize}
+  \item Se la modifica non coinvolge una chiave, il record viene ricercato con un costo di $h+1$ e il blocco viene modificato con un costo di 1.
+  \item Se la modifica coinvolge una chiave, il costo totale è dato dalla somma degli accessi necessari per la cancellazione del record con chiave $v$ e quelli necessari per l'inserimento del record con il nuovo valore della chiave.
+\end{itemize}
+
+\subsubsection{Altezza di un B-Tree}
+Dato un B-Tree avente $N$ chiavi, posto $m$ il numero massimo di figli che un nodo può avere e $d := \frac{m}{2}$ il numero minimo di figli che un nodo può avere, l'altezza $h$ del B-Tree è compresa tra:
+\[
+\left\lceil \log_m(N+1) \right\rceil \leq h \leq \biggl\lfloor \log_d \biggl( \frac{N+1}{2} \biggr) \biggr\rfloor + 1
+\]
+Dunque, l'altezza massima viene raggiunta quando l'albero possiede il minimo numero di nodi, mentre l'altezza minima quando possiede il massimo numero di nodi.
+\subsubsection{Performance di un B-Tree}
+Data l'altezza h di un B-Tree, si ha che:
+\begin{itemize}
+  \item L'operazione \texttt{get(k)} impiega massimo $h$ accessi al disco
+  \item L'operazione \texttt{put(k)} impiega massimo 3$h$ + 1 accessi al disco 
+  \item L'operazione \texttt{remove(k)} impiega massimo 3$h$ accessi al disco
+\end{itemize}
+
+\subsection{B$^+$-Tree}
+Un B+-Tree è un B-Tree avente le seguenti proprietà aggiuntive:
+\begin{itemize}
+    \item Tutti i valori chiave presenti nei nodi non foglia sono ripetuti nei nodi foglia, in modo che ogni possibile chiave dell’albero sia presente nei nodi foglia stessi.
+    \item I nodi di livello più alto contengono sottoinsiemi delle chiavi presenti nei nodi foglia.
+    \item Ogni nodo foglia ha un puntatore aggiuntivo, il quale punta a un nodo foglia adiacente.
+\end{itemize}
+Per via di tali proprietà, un B+-Tree risulta essere più efficiente rispetto a un normale B-Tree, poiché la sua altezza è generalmente inferiore.
+
 %\section{Decomposizione che preserva $F$}
 %Dato uno schema $R$ e un insieme di dipendenze funzionali $F$, $R$ è in 3NF se e solo se non ci sono attributi che dipendono parzialmente o transitivamente da una chiave.
 

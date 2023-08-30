@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1693386050 "/Users/alex/Desktop/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" "mainBD1.pdf" "mainBD1" 1693386051 0
-  "/Users/alex/Desktop/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" 1693249361 36476 aa2691462f65f180eec046d2f9af2d52 ""
+["pdflatex"] 1693388775 "/Users/alex/Desktop/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" "mainBD1.pdf" "mainBD1" 1693388777 0
+  "/Users/alex/Desktop/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" 1693388773 41861 947e405795939bc05eb73aff08dbd0e9 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -209,10 +209,10 @@
   "im/FA=F+.jpg" 1693238688 749086 48162c6b86a3693b6a36402c64d7147d ""
   "im/X.jpg" 1693386007 512651 6900811675c958d8c5aed484021ab605 ""
   "im/logo_sapienza_new.png" 1685377046 230566 cb057c2f7633fce546392e6407721b5c ""
-  "mainBD1.aux" 1693386051 6515 e897aa67db04abadaee84a4e13aebaae "pdflatex"
-  "mainBD1.out" 1693386051 7660 0dbaf8fe3d2f29bcfcf5078e89b2f9b3 "pdflatex"
-  "mainBD1.tex" 1693249361 36476 aa2691462f65f180eec046d2f9af2d52 ""
-  "mainBD1.toc" 1693386051 3780 8cbb76528588c58e8b5b626af2719853 "pdflatex"
+  "mainBD1.aux" 1693388777 7296 73b00ca6f97e669c53dedaa013a7081e "pdflatex"
+  "mainBD1.out" 1693388777 8491 16b6af88727cada48e33158c42152f12 "pdflatex"
+  "mainBD1.tex" 1693388773 41861 947e405795939bc05eb73aff08dbd0e9 ""
+  "mainBD1.toc" 1693388777 4315 ef42787339e1230d79dba47dcd2e8242 "pdflatex"
   (generated)
   "mainBD1.aux"
   "mainBD1.log"
