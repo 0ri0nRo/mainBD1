@@ -330,15 +330,11 @@ Dato uno schema $R$ e due insiemi $F$ e $G$ di dipendenze funzionali su $R$, si 
 
 \subsection{Dimostrazione}
 \begin{itemize}
-  \item Denotiamo come $G \xrightarrow{\text{A}} F$ la possibilità di ottenere F partendo da G applicando una determinata quantità di assiomi di Armstrong.
-  \item  Ricordando che $G^A$ è l'insieme di tutte le dipendenze funzionali ottenibile applicando assiomi di Armstrong su $G$, allora:\par
-
-  \[G \xrightarrow{\text{A}} F \Leftrightarrow \forall X \rightarrow Y \in F, \text{ si ha } X \rightarrow Y \in G^A = G^+ \Leftrightarrow F \subseteq G^+\]
-
-  \item Siccome $F \subseteq G \Leftrightarrow G \xrightarrow{\text{A}} F$, per definizione di $F^A = F^+$ si ha che:
-
-  \[F \subseteq G^+ \Rightarrow G \xrightarrow{\text{A}} F \xrightarrow{\text{A}} F^A = F^+ \Rightarrow F^+ \subseteq G^+\]
-  \item Viceversa, si ha che $F^+ \subseteq G^+ \Rightarrow F \subseteq F^+ \subseteq G^+$, quindi concludiamo che $F \subseteq G^+ \Leftrightarrow F^+ \subseteq G^+$
+  \item Denotiamo come $F \xrightarrow{\text{A}} F'$ la possibilità di ottenere $F'$ partendo da F applicando una determinata quantità di assiomi di Armstrong.
+  \item  Ricordando che $F^A$ è l'insieme di tutte le dipendenze funzionali ottenibile applicando assiomi di Armstrong su $F$.
+  \item Otteniamo che $F \xrightarrow{\text{A}} F' \Leftrightarrow F' \subseteq F^+$ e in particolare $F \rightarrow F^+$
+  \item Adesso abbiamo ottenuto che $F \subseteq G^+ \Leftrightarrow G \xrightarrow{\text{A}} F \xrightarrow{\text{A}} F^+$ 
+  \item Quindi $G \xrightarrow{\text{A}} F^+$ il quale implica che \textbf{$F^+ \subseteq G^+$}
 
 \end{itemize}
 
