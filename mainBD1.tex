@@ -575,6 +575,15 @@ Sia $R$ uno schema e sia $F$ un insieme di dipendenze funzionali definite su $R$
     \item $\exists K' \subseteq K \,|\, K' \rightarrow R \in F^+ \land \nexists K'' \subset K' \,|\, K'' \rightarrow R \in F^+$ (ossia contiene una chiave)
 \end{itemize}
 
+\subsubsection{Definizione di decomposizione}
+Sia $R$ uno schema. Definiamo come decomposizione di $R$ l'insieme di sottoschemi
+$\rho$ = $R_1, \cdots,R_k$ che ricoprono $R$, ossia tali che:
+\[ R := \bigcup_{i=0}^{k} R_i \]
+In altre parole, $R_1, \cdots , R_k$ sono un insieme di schemi tramite cui è possibile ricostruire $R$ effettuando un join naturale tra essi.
+
+\subsubsection{Decomposizioni che preservano i dati}
+
+
 \subsubsection{Chiave Minimale (chiave primaria)}
 Una chiave minimale, anche nota come chiave primaria, è un insieme di attributi (colonne) all'interno di una tabella (relazione) che può essere utilizzato per identificare univocamente ogni riga all'interno di quella tabella.
 \begin{itemize}
