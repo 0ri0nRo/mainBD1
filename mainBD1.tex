@@ -734,11 +734,33 @@ Data l'altezza h di un B-Tree, si ha che:
 \subsection{B$^+$-Tree}
 Un B+-Tree è un B-Tree avente le seguenti proprietà aggiuntive:
 \begin{itemize}
-    \item Tutti i valori chiave presenti nei nodi non foglia sono ripetuti nei nodi foglia, in modo che ogni possibile chiave dell’albero sia presente nei nodi foglia stessi.
+    \item Tutti i valori chiave presenti nei nodi non foglia sono ripetuti nei nodi foglia, in modo che ogni possibile chiave dell'albero sia presente nei nodi foglia stessi.
     \item I nodi di livello più alto contengono sottoinsiemi delle chiavi presenti nei nodi foglia.
     \item Ogni nodo foglia ha un puntatore aggiuntivo, il quale punta a un nodo foglia adiacente.
 \end{itemize}
 Per via di tali proprietà, un B+-Tree risulta essere più efficiente rispetto a un normale B-Tree, poiché la sua altezza è generalmente inferiore.
+
+\section{Formulario}
+\subsection{Hash}
+\[ \text{NRpBk =} \left\lceil \frac{NR}{NBr} \right\rceil\]
+\[ \text{RpB =} \biggl\lfloor \frac{BS-PS}{RS} \biggr\rfloor\]
+\[ \text{BBk =} \left\lceil \frac{NRpBk}{RpB} \right\rceil\]
+\[ \text{PpB =} \biggl\lfloor \frac{BS}{RS} \biggr\rfloor\]
+\[ \text{BBD =} \left\lceil \frac{NBk}{PpB} \right\rceil\]
+\[ \text{NMA =} \left\lceil \frac{BBk}{2} \right\rceil\]
+\[Tot = NMA \cdot BBk + BBD \]
+
+\subsection{Isam}
+\[ \text{RpB =} \biggl\lfloor \frac{BS}{RS} \biggr\rfloor\]
+\[ \text{BFP =} \left\lceil \frac{NR}{RpB} \right\rceil\]
+\[ \text{EpB =} \biggl\lfloor \frac{BS}{KS - PS} \biggr\rfloor\]
+\[ \text{BI =} \left\lceil \frac{BFP}{EpB} \right\rceil\]
+\[ \text{NA =} \left\lceil log_2(BI) \right\rceil +1 \]
+
+\subsection{}
+
+
+
 
 %\section{Decomposizione che preserva $F$}
 %Dato uno schema $R$ e un insieme di dipendenze funzionali $F$, $R$ è in 3NF se e solo se non ci sono attributi che dipendono parzialmente o transitivamente da una chiave.
