@@ -755,15 +755,15 @@ Per via di tali proprietà, un B+-Tree risulta essere più efficiente rispetto a
 \[ \text{RpB =} \biggl\lfloor \frac{BS}{RS} \biggr\rfloor\]
 \[ \text{BFP =} \left\lceil \frac{NR}{RpB} \right\rceil\]
 \[ \text{EpB =} \biggl\lfloor \frac{BS}{KS + PS} \biggr\rfloor\]
-\[ \text{BI =} \left\lceil \frac{BFP}{EpB} \right\rceil\]
-\[ \text{NA =} \left\lceil log_2(BI) \right\rceil +1 \]
+\[ \text{BFI =} \left\lceil \frac{BFP}{EpB} \right\rceil\]
+\[ \text{NA =} \left\lceil log_2(BFI) \right\rceil +1 \]
 
 \subsection{B-Tree}
 Se al \textbf{massimo} allora:\par
 \[ \text{RpB =} \biggl\lfloor \frac{BS}{RS} \biggr\rfloor\]
 Se al \textbf{minimo} allora:\par
 \[ \text{RpB =} \biggl\lfloor \frac{BS \cdot 0.5}{RS} \biggr\rfloor\]
-\[ \text{RI =} \left\lceil \frac{BS - PS}{KS + PS} \right\rceil\]
+\[ \text{masismo numero figli per nodo $m$ = RI =} \left\lceil \frac{BS - PS}{KS + PS} \right\rceil\]
 \[ \text{BFP =} \left\lceil \frac{NR}{RpB} \right\rceil\]
 \[ \text{$L_0 \dots L_k$ =} \biggl\lceil \frac{BFP}{RI} \biggr\rceil\]
 
