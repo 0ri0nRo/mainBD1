@@ -581,7 +581,15 @@ $\rho$ = $R_1, \cdots,R_k$ che ricoprono $R$, ossia tali che:
 \[ R := \bigcup_{i=0}^{k} R_i \]
 In altre parole, $R_1, \cdots , R_k$ sono un insieme di schemi tramite cui è possibile ricostruire $R$ effettuando un join naturale tra essi.
 
-\subsubsection{Decomposizioni che preservano i dati}
+Sia R uno schema con decomposizione $\rho$ = $R_1, \cdots, R_k$ e sia F un insieme di dipendenze funzionali su R.
+Definiamo $\rho$ come una buona decomposizione di R se:
+\begin{itemize}
+  \item Ogni sottoschema $R_1, \cdots, R_k$ $\in$ $\rho$ è in \textbf{Terza Forma Normale}
+  \item $\rho$ permette di mantenere soddisfatta ogni dipendenza in $F$ per ogni istanza legale $r$ di $R$ ricostruita attraverso un join naturale tra tutte le istanze $R_1, \cdots, R_k$ rispettivamente di $R_1, \cdots, R_k$ \textbf{(preservazione di $F$)}
+  \item $\rho$ permette di ricostruire senza perdita di informazioni le tuple di ogni istanza legale r di R ricostruita attraverso un join naturale tra tutte le istanze $R_1, \cdots, R_k$ rispettivamente di $R_1, \cdots, R_k$ \textbf{(join senza perdita)}
+\end{itemize}
+  
+%\subsubsection{Decomposizioni che preservano i dati}
 
 
 \subsubsection{Collegamento tra $F^+$ e $X_F^+$}
@@ -773,7 +781,7 @@ Per via di tali proprietà, un B+-Tree risulta essere più efficiente rispetto a
 Se al \textbf{massimo} allora:\par
 \[ \text{RpB =} \biggl\lfloor \frac{BS}{RS} \biggr\rfloor\]
 Se al \textbf{minimo} allora:\par
-\[ \text{RpB =} \biggl\lfloor \frac{BS \cdot 0.5}{RS} \biggr\rfloor\]
+\[ \text{RpB =} \biggl\lceil \frac{BS \cdot 0.5}{RS} \biggr\rceil \]
 \[ \text{masismo numero figli per nodo $m$ = RI =} \left\lceil \frac{BS - PS}{KS + PS} \right\rceil\]
 \[ \text{BFP =} \left\lceil \frac{NR}{RpB} \right\rceil\]
 \[ \text{$L_0 \dots L_k$ =} \biggl\lceil \frac{BFP}{RI} \biggr\rceil\]
