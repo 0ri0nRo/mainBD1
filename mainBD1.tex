@@ -740,6 +740,7 @@ Un B+-Tree è un B-Tree avente le seguenti proprietà aggiuntive:
 \end{itemize}
 Per via di tali proprietà, un B+-Tree risulta essere più efficiente rispetto a un normale B-Tree, poiché la sua altezza è generalmente inferiore.
 
+\pagebreak
 \section{Formulario}
 \subsection{Hash}
 \[ \text{NRpBk =} \left\lceil \frac{NR}{NBr} \right\rceil\]
@@ -753,7 +754,7 @@ Per via di tali proprietà, un B+-Tree risulta essere più efficiente rispetto a
 \subsection{Isam}
 \[ \text{RpB =} \biggl\lfloor \frac{BS}{RS} \biggr\rfloor\]
 \[ \text{BFP =} \left\lceil \frac{NR}{RpB} \right\rceil\]
-\[ \text{EpB =} \biggl\lfloor \frac{BS}{KS - PS} \biggr\rfloor\]
+\[ \text{EpB =} \biggl\lfloor \frac{BS}{KS + PS} \biggr\rfloor\]
 \[ \text{BI =} \left\lceil \frac{BFP}{EpB} \right\rceil\]
 \[ \text{NA =} \left\lceil log_2(BI) \right\rceil +1 \]
 
