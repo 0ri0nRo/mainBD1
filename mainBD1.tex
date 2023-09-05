@@ -233,7 +233,7 @@ Tale algoritmo viene eseguito in tempo polinomiale, ossia $On^{k}$
 \subsection{Teorema: L'algoritmo computa $X_{F}^{+}$}
 Il teorema calcola correttamente la chiusura di un insieme di attributi X rispetto ad un insieme F di dipendenze funzionali.\\
 
-\textbf{Dimostrazione Correttezza dell'algoritmo}:\\
+\textbf{Dimostrazione correttezza dell'algoritmo}:\\
 
 Denotiamo:\par
 
@@ -270,7 +270,7 @@ Sia $j$ tale che $S_{j} \subseteq Z_{j}$ (cioè,  $Z_{j}$ è l'output di $Z$ qua
     \end{itemize}
     
   \end{itemize}
-  \pagebreak
+  
   \item Dimostriamo ora che $X^{+} \subseteq Z_{i}$:\par
   \begin{itemize}
     \item Sia $X \subseteq R$ e sia $r$ istanza di $R(Z_{i}, R-Z_{i})$. 
@@ -564,7 +564,7 @@ La chiusura di un insieme di dipendenze funzionali è l'insieme di dipendenze fu
 Un sottoinsieme $K$ di $R$ è chiave per $R$ se è un insieme minimale che determina $R$. Ovvero se $K \rightarrow R$ appartiene a $F^+$ e non esiste un $K'$ sottoinsieme di $K$ tale che $K' \rightarrow R$ appartiene a $F^+$.\\
 
 \subsubsection{Cos'è un attributo primo?}
-Un attributo si dice primo se appartiene a una chiave di $R$.\\
+Un attributo $A$ dello schema $R$ è primo se e solo se fa parte di almeno una chiave di R. In caso contrario $A$ è detto non-primo.\\
 
 \subsubsection{Cos'è un superchiave?}
 Un sottoinsieme $X$ di $R$ è una superchiave se contiene una chiave di $R$.\\
@@ -574,25 +574,6 @@ Sia $R$ uno schema e sia $F$ un insieme di dipendenze funzionali definite su $R$
     \item $K \rightarrow R \in F^+$
     \item $\exists K' \subseteq K \,|\, K' \rightarrow R \in F^+ \land \nexists K'' \subset K' \,|\, K'' \rightarrow R \in F^+$ (ossia contiene una chiave)
 \end{itemize}
-
-\subsubsection{Definizione di decomposizione}
-Sia $R$ uno schema. Definiamo come decomposizione di $R$ l'insieme di sottoschemi
-$\rho$ = $R_1, \cdots,R_k$ che ricoprono $R$, ossia tali che:
-\[ R := \bigcup_{i=0}^{k} R_i \]
-In altre parole, $R_1, \cdots , R_k$ sono un insieme di schemi tramite cui è possibile ricostruire $R$ effettuando un join naturale tra essi.
-
-Sia R uno schema con decomposizione $\rho$ = $R_1, \cdots, R_k$ e sia F un insieme di dipendenze funzionali su R.
-Definiamo $\rho$ come una buona decomposizione di R se:
-\begin{itemize}
-  \item Ogni sottoschema $R_1, \cdots, R_k$ $\in$ $\rho$ è in \textbf{Terza Forma Normale}
-  \item $\rho$ permette di mantenere soddisfatta ogni dipendenza in $F$ per ogni istanza legale $r$ di $R$ ricostruita attraverso un join naturale tra tutte le istanze $R_1, \cdots, R_k$ rispettivamente di $R_1, \cdots, R_k$ \textbf{(preservazione di $F$)}
-  \item $\rho$ permette di ricostruire senza perdita di informazioni le tuple di ogni istanza legale r di R ricostruita attraverso un join naturale tra tutte le istanze $R_1, \cdots, R_k$ rispettivamente di $R_1, \cdots, R_k$ \textbf{(join senza perdita)}
-\end{itemize}
-  
-%\subsubsection{Decomposizioni che preservano i dati}
-
-
-\subsubsection{Collegamento tra $F^+$ e $X_F^+$}
 
 \subsubsection{Chiave Minimale (chiave primaria)}
 Una chiave minimale, anche nota come chiave primaria, è un insieme di attributi (colonne) all'interno di una tabella (relazione) che può essere utilizzato per identificare univocamente ogni riga all'interno di quella tabella.
@@ -617,10 +598,10 @@ Una dipendenza $X \rightarrow A$ in $F^+$ si dice parziale se $A$ non è primo e
 \subsubsection{Terza Forma Normale (3NF)}
 Sia R uno schema e sia F un insieme di dipendenze funzionali definite su R. Lo schema R viene detto in terza forma normale (3NF) se:
 
-\[\forall X \rightarrow A \in F^+, \, A \in R - X, \, \exists K \subseteq R \text{chiave} \,|\, K \subseteq X \vee A \in K\]
+\[\forall X \rightarrow A \in F^+, \, A \in R - X, \, \exists K \subseteq R \text{ chiave} \,|\, K \subseteq X \vee A \in K\]
 
-In altre parole, uno schema viene detto in terza forma normale se per ogni dipendenza funzionale non banale $X \rightarrow A \in F^+$, il determinante X è superchiave o il determinato A è primo.
-Se uno schema è in 3NF, la quantità di anomalie e di ridondanze dei dati è estremamente ridotta.
+In altre parole, uno schema viene detto in terza forma normale se per ogni dipendenza funzionale non banale $X \rightarrow A \in F^+$, il determinante X è superchiave o il determinato A è primo.\\
+Se uno schema è in 3NF, la quantità di \textbf{anomalie} e di \textbf{ridondanze dei dati} è estremamente ridotta.
 
 \subsubsection{Quando è che una relazione è in 3NF? (Dimostra l'equivalenza tra le due affermazioni)}
 \begin{itemize}
@@ -634,7 +615,7 @@ Definiamo come $F^A$ l'insieme di tutte le dipendenze funzionali ottenibili assi
 Una decomposizione $\rho$ preserva un insieme di dipendenze funzionali $F$ se e solo se $F \equiv G$ dove (definizione di G):
 \[ G := \bigcup_{i=1}^{k} \{X \rightarrow Y \mid X \rightarrow Y \in F^+ \land XY \subseteq R_i \} \]
 
-\textbf{Spiegazione}: Proiettare ogni dipendenza funzionale in $F$ sul sottoschema $R_i$ vuol dire prendere in considerazione tutte e sole le dipendenze derivabili da $F$ (tramite assiomi di Armstrong, quindi $F^+$) che hanno tutti gli attributi in $R_i$
+\textbf{Spiegazione}: Proiettare ogni dipendenza funzionale in $F$ sul sottoschema $R_i$ vuol dire prendere in considerazione tutte e sole le dipendenze derivabili da $F$ (tramite assiomi di Armstrong, quindi $F^+$) che hanno tutti gli attributi in $R_i$.
 
 
 \subsection{Organizzazione con file Heap}
@@ -671,7 +652,7 @@ L'efficienza dell'algoritmo di hash utilizzato è misurata in base al numero att
 
 \textbf{SBA (Sequential Block Address)}: L'indirizzo sequenziale del blocco fa riferimento all'indirizzo del blocco successivo in sequenza rispetto a quello corrente. Questo è particolarmente rilevante quando si accede a dati archiviati in modo sequenziale su un dispositivo di archiviazione, come ad esempio quando i record sono memorizzati uno dopo l'altro in un blocco. L'SBA è utilizzato per spostarsi in modo efficiente attraverso i dati archiviati in sequenza.}
 \begin{itemize}
-  \item Recuperare un record non in overflow richiede un singolo RBA per rag- giungere l'indirizzo del primo blocco del bucket, ottenuto dall'algoritmo di hash, per poi (potenzialmente) eseguire uno o più SBA, poiché i record nello stesso bucket sono archiviati in modo sequenziale
+  \item Recuperare un record non in overflow richiede un singolo RBA per raggiungere l'indirizzo del primo blocco del bucket, ottenuto dall'algoritmo di hash, per poi (potenzialmente) eseguire uno o più SBA, poiché i record nello stesso bucket sono archiviati in modo sequenziale
   \item Recuperare un record in overflow richiede accessi ai blocchi aggiuntivi in base alla percentuale di record in overflow, dipendente dalla tecnica di hashing utilizzata, e in base alla tecnica adottata per gestirli
 \end{itemize}
 
@@ -701,33 +682,35 @@ Effettuando la ricerca binaria sul file indice, se k è la chiave del record che
 \end{itemize}
 
 \subsubsection{Variante Isam con chiavi indice che hanno valore ultimo record}
-
+TO-DO
 
 \pagebreak
 \subsection{B-Tree}
-L'organizzazione del file tramite B-Tree è una generalizzazione del file ISAM.In un file B-Tree non si accede ai blocchi del file principale, come nell'ISAM, attraverso un file indice, bensì attraverso una gerarchia di indici. \\
+L'organizzazione del file tramite B-Tree è una \textbf{generalizzazione} del file ISAM. In un file B-Tree non si accede ai blocchi del file principale, come nell'ISAM, attraverso un file indice, bensì attraverso una \textbf{gerarchia} di indici. \\
 
-L'indice a livello più alto è costituito da un unico blocco ed è quindi allocato in memoria principale. Durante la ricerca di un record con un dato valore per la chiave si parte dall'indice di livello più alto e, man mano che si scende, si restringe la porzione di blocchi del file principale in cui deve trovarsi il record, fino a che nell'ultimo livello tale porzione è ristretta ad un solo blocco. Per evitare ulteriori passaggi per l'inserimento, la cancellazione e la modifica, i blocchi degli indici e del file principale devono essere sempre pieni almeno per metà.\\
+L'\textbf{indice} a livello più alto è costituito da un unico blocco ed è quindi allocato in \textbf{memoria principale}. Durante la ricerca di un record con un dato valore per la chiave si parte dall'indice di livello più alto e, man mano che si scende, si restringe la porzione di blocchi del file principale in cui deve trovarsi il record, fino a che nell'ultimo livello tale porzione è ristretta ad un solo blocco. Per evitare ulteriori passaggi per l'inserimento, la cancellazione e la modifica, i blocchi degli indici e del file principale devono essere sempre pieni almeno per metà.\par
+Il B-Tree è utile per file \textbf{grossi} dove non conviene caricare tutti i file non necessari alla query.\\
 
-Ogni blocco del file indice è costituito da una coppia $(v,b)$ dove $v$ è il valore della chiave del primo record della porzione del file principale accessibile attraverso il puntatore $b$, il quale punta ad un blocco del file indice a livello immediatamente inferiore o, se è l'indice più basso della gerarchia, ad un blocco del file principale
+Ogni blocco del file indice è costituito da una \textbf{coppia $(v,b)$} dove $v$ è il valore della \textbf{chiave del primo} record della porzione del file principale accessibile attraverso il \textbf{puntatore $b$}, il quale punta ad un blocco del file indice a livello immediatamente inferiore o, se è l'indice più basso della gerarchia, ad un blocco del file principale
 
 \subsubsection{Ricerca}
-Per ricercare un record con un valore $v$ per la chiave si procede nella seguente maniera: Si parte dall'indice a livello più alto, il quale è costituito da un solo blocco. Ad ogni passo si esamina un solo blocco. Se esso è del file principale, allora il record ricercato dovrà essere in tale blocco, altrimenti si cerca un valore che ricopra $v$ e si segue il puntatore associato.Ad ogni passo si scende di livello quindi si effettuano al massimo $h$+1 passi, dove $h$ è l'altezza dell'albero.
+Per ricercare un record con un valore $v$ per la chiave si procede nella seguente maniera: Si parte dall'indice a livello più alto, il quale è costituito da un solo blocco. Ad ogni passo si esamina un solo blocco. Se esso è del file principale, allora il record ricercato dovrà essere in tale blocco, altrimenti si cerca un valore che ricopra $v$ e si segue il puntatore associato. Ad ogni passo si scende di livello quindi si effettuano al massimo $h$+1 passi, dove $h$ è l'altezza dell'albero.\\
+Il costo della ricerca è di $O(h - 1 + 1)$ (-1 perchè la radice già presente nella memoria principale).
 
 \subsubsection{Inserimento}
 Il costo dell'inserimento dipende dal fatto che ci sia o meno spazio sufficiente all'interno del blocco.
 
 \begin{itemize}
     \item Se c'è spazio, il record viene ricercato con un costo di $h+1$ e viene modificato il blocco con un costo di 1, quindi il costo totale è di $h+2$ accessi.
-    \item Se non c'è spazio, il record viene ricercato con un costo di $h+1$. Viene poi chiesto al sistema un nuovo blocco e vengono ripartiti i record del blocco pieno in modo da tenere entrambi i blocchi pieni almeno per metà. Lo stesso discorso va effettuato al blocco indice di livello 1 se esso è pieno, e al livello 2 se anche esso è pieno, e così via. Se tutti i blocchi sono pieni, l'altezza dell'albero aumenterà di uno poiché tutti i blocchi indice, fino alla radice, verranno sdoppiati. Verrà quindi richiesto un ulteriore blocco che farà da nuova radice.
+    \item Se non c'è spazio, il record viene \textbf{ricercato} con un costo di $h+1$. Viene poi \textbf{chiesto} al sistema un nuovo blocco e vengono ripartiti i record del blocco pieno in modo da tenere entrambi i blocchi \textbf{pieni almeno per metà}. Lo stesso discorso va effettuato al blocco indice di livello 1 se esso è pieno, e al livello 2 se anche esso è pieno, e così via. Se \textbf{tutti} i blocchi sono pieni, l'\textbf{altezza dell'albero aumenterà di uno} poiché tutti i blocchi indice, fino alla radice, verranno \textbf{sdoppiati}. Verrà quindi richiesto un ulteriore blocco che farà da \textbf{nuova radice}.
 \end{itemize}
 
 \subsubsection{Cancellazione}
 Anche per la cancellazione, come per l'inserimento, il costo dipende da quanto siano pieni i blocchi:
 
 \begin{itemize}
-    \item Se dopo la cancellazione il blocco rimane pieno almeno per metà, allora il record viene ricercato con un costo di $h+1$ e viene modificato il blocco con un costo di 1. In questo caso, il costo totale è di $h+2$.
-    \item Se dopo la cancellazione il blocco non soddisfa la condizione di essere pieno almeno per metà, si verifica se c'è spazio nei blocchi adiacenti per inserire il contenuto di tale blocco. Lo stesso principio viene applicato ai blocchi indice se essi non rimangono pieni almeno per metà dopo la cancellazione del blocco. Nel caso peggiore, le modifiche riguardano tutti i blocchi fino alla radice, e l'altezza dell'albero può essere diminuita di uno.
+    \item Se dopo la cancellazione il blocco rimane pieno almeno per metà, allora il record viene ricercato con un costo di $h+1$ e viene modificato il blocco con un costo di 1. In questo caso, il costo totale è di $h+2$. \textit{(Modifica + Ricerca = 1 + 1 + altezza).}
+    \item Se dopo la cancellazione il blocco non soddisfa la condizione di essere \\\textbf{pieno almeno per metà}, si verifica se c'è spazio nei blocchi adiacenti per inserire il contenuto di tale blocco. Lo stesso principio viene applicato ai blocchi indice se essi non rimangono pieni almeno per metà dopo la cancellazione del blocco. Nel caso peggiore, le modifiche riguardano tutti i blocchi fino alla radice, e l'altezza dell'albero può essere diminuita di uno.
 \end{itemize}
 
 \subsubsection{Modifica}
@@ -781,7 +764,7 @@ Per via di tali proprietà, un B+-Tree risulta essere più efficiente rispetto a
 Se al \textbf{massimo} allora:\par
 \[ \text{RpB =} \biggl\lfloor \frac{BS}{RS} \biggr\rfloor\]
 Se al \textbf{minimo} allora:\par
-\[ \text{RpB =} \biggl\lceil \frac{BS \cdot 0.5}{RS} \biggr\rceil \]
+\[ \text{RpB =} \biggl\lfloor \frac{BS \cdot 0.5}{RS} \biggr\rfloor\]
 \[ \text{masismo numero figli per nodo $m$ = RI =} \left\lceil \frac{BS - PS}{KS + PS} \right\rceil\]
 \[ \text{BFP =} \left\lceil \frac{NR}{RpB} \right\rceil\]
 \[ \text{$L_0 \dots L_k$ =} \biggl\lceil \frac{BFP}{RI} \biggr\rceil\]
