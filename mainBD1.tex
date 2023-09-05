@@ -316,6 +316,7 @@ Dato uno schema $R$ e due insiemi $F$ e $G$ di dipendenze funzionali su $R$, si 
 
 \[F \subseteq G^+ \rightarrow F^+ \subseteq G^+\]
 
+
 \subsection{Dimostrazione}
 \begin{itemize}
   \item Denotiamo come $F \xrightarrow{\text{A}} F'$ la possibilità di ottenere $F'$ partendo da F applicando una determinata quantità di assiomi di Armstrong.
@@ -325,10 +326,6 @@ Dato uno schema $R$ e due insiemi $F$ e $G$ di dipendenze funzionali su $R$, si 
   \item Quindi $G \xrightarrow{\text{A}} F^+$ il quale implica che \textbf{$F^+ \subseteq G^+$}
 
 \end{itemize}
-
-
-
-
 
 
 
@@ -418,9 +415,9 @@ preso $X \subseteq R$, il seguente algoritmo calcola $X_G^+$ tramite $F$:
 \end{itemize}
 
 Abbiamo dimostrato che \textbf{$Z_f = X_G^+$}
+
+
 \pagebreak
-
-
 \section{Join senza perdita}
 Una decomposizione ha un join senza perdita se per ogni istanza legale \textit{r} di $R$ si ha che \textit{r} è ottenibile facendo il join naturale tra le proiezioni delle decomposizioni in $\rho$ di \textit{r}.
 \\
