@@ -68,11 +68,11 @@
     
     \begin{abstract}  
     
-    \hrulefill
-
+    \hrulefill\\
 
     Le fonti sono le "Hand Notes" del prof. Perelli tradotte in italiano, appunti presi dalle slides della prof. De Marsico ed eventuali e-mail.\\
-    \textbf{Nota: è vietata assolutamente la vendita di questo materiale in qualsiasi forma senza il mio consenso.} 
+    \textbf{Nota: è vietata assolutamente la vendita di questo materiale in qualsiasi forma senza il mio consenso.} \\
+
     \hrulefill
     \end{abstract}
   \end{titlepage}
@@ -553,6 +553,27 @@ Introduciamo altre tre regole conseguenza degli assiomi che consentono di deriva
 \section{Definizioni utili}
 \subsubsection{Cos'è una dipendenza funzionale?}
 Una dipendenza funzionale su una relazione $R$ è una coppia ordinata di sottoinsiemi di $R$ e viene denotata con $X \rightarrow Y$.\\
+
+\subsubsection{Cos'è $F^+$ Si può calcolare $F^+$?}
+Dato uno schema di relazione R e un insieme F di dipendenze funzionali su R la \textbf{chiusura di F} è l'insieme deòòe dipendenze funzionali che sono soddisfatte da ogni istanza legare di R.\par
+Banalmente si ha che $F \subseteq F^+$
+
+\subsubsection{Cosa facciamo se uno schema non è in 3FN?}
+
+
+Se tuttavia dopo tale processo ci trovassimo a produrre uno schema che non è in 3NF dovremmo procedere ad una fase di decomposizione di tale schema.
+
+Uno schema che non è in 3NF può essere decomposto in più modi in un insieme di schemi in 3NF.
+
+Pertanto quando si decompone uno schema si vuole che ogni sua istanza sia ricostruibile da un’istanza dello schema ottenuto dalla decomposizione.
+
+Quando si decompone uno schema per ottenerne uno in 3NF occorre tenere presenti altri due requisiti dello schema decomposto:
+\begin{itemize}
+  \item deve preservare le dipendenze funzionali che valgono su ogni istanza legale dello schema
+  originario.
+  \item deve permettere di ricostruire mediante join naturale ogni istanza legale dello schema originario.
+\end{itemize}
+
 
 \subsubsection{Cos'è la chiusura di un insieme di dipendenze funzionali?}
 La chiusura di un insieme di dipendenze funzionali è l'insieme di dipendenze funzionali soddisfatte da ogni istanza legale di $R$, essa viene denotata con $F^+$.\\
