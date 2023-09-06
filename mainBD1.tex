@@ -574,6 +574,14 @@ Quando si decompone uno schema per ottenerne uno in 3NF occorre tenere presenti 
   \item deve permettere di ricostruire mediante join naturale ogni istanza legale dello schema originario.
 \end{itemize}
 
+\subsubsection{Cosa vuol dire decomporre uno schema?}
+Se lo schema $R$ è composto da un certo insieme di attributi, decomporlo significa definire dei sottoschemi che contengono ognuno un sottoinsieme degli attributi di $R.$ I sottoschemi possono avere attributi in comune, e la loro unione deve necessariamente contenere tutti gli attributi di $R$.
+Quindi: $R$ è un insieme di attributi, una decomposizione di R è una famiglia di insiemi di attributi.
+Nota: decomporre una istanza di una relazione con un certo schema, in base alla decomposizione dello schema stesso, significa proiettare ogni tupla dell'istanza originaria sugli attributi dei singoli sottoschemi... eliminando i duplicati che potrebbero essere generati dal fatto che due tuple sono distinte ma hanno una porzione comune che ricade nello stesso sottoschemma.
+
+\subsubsection{Come sono fatte le dipendenze banali?}
+Dati uno schema di relazione R e due sottoinsiemi non vuoti X,Y di R tali che $Y \subseteq X$ si ha che ogni istanza r di R soddisfa la dipendenza funzionale $X \to Y$. Pertanto, se $Y \subseteq X$ $X \rightarrow Y \in F^+$ una tale dipendenza funzionale è detta \textbf{banale}.
+
 
 \subsubsection{Cos'è la chiusura di un insieme di dipendenze funzionali?}
 La chiusura di un insieme di dipendenze funzionali è l'insieme di dipendenze funzionali soddisfatte da ogni istanza legale di $R$, essa viene denotata con $F^+$.\\
