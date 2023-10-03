@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1693993229 "/home/alex/uni/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" "mainBD1.pdf" "mainBD1" 1693993230 0
-  "/home/alex/uni/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" 1693993228 47001 1e68876347c5d286779cfb57a68acea6 ""
+["pdflatex"] 1696360831 "/home/alex/uni/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" "mainBD1.pdf" "mainBD1" 1696360835 0
+  "/home/alex/uni/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" 1696360831 47001 1e68876347c5d286779cfb57a68acea6 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1689853683 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1689853683 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -200,8 +200,8 @@
   "/usr/share/texmf-dist/tex/latex/url/url.sty" 1689853683 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1689853683 56148 51a9a8571c07b9921892ae11063ae853 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1692951842 4623317 a14e403ea671a9bc12f23e543c6a500e ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1692951770 8204234 cc6fba56647c609384f30e1fd9346692 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1695195980 4623317 a14e403ea671a9bc12f23e543c6a500e ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1695195868 6768053 e525e1210b4da535a20a2dce523b0710 ""
   "im/1.png" 1693902468 34947 87361f024d7fa30a4a4f967e4091eeb1 ""
   "im/2.png" 1693902468 23246 2c8dfb26070570fa7ee00e723da2b80d ""
   "im/3.png" 1693902468 109157 f7c44a7b06370486168b1bebae5056ae ""
@@ -210,10 +210,10 @@
   "im/U.png" 1693902468 143630 583024b9a5ad033cbce871a2be80a7a5 ""
   "im/X.jpg" 1693902468 479499 d0f7f20a840da8b3124be773be825984 ""
   "im/logo_sapienza_new.png" 1693902468 230566 cb057c2f7633fce546392e6407721b5c ""
-  "mainBD1.aux" 1693993230 9234 489c36984939a2bc0c6e3178c578a735 "pdflatex"
-  "mainBD1.out" 1693993230 11565 8b19bc41172d6a0f8ad7639463c4d21b "pdflatex"
-  "mainBD1.tex" 1693993228 47001 1e68876347c5d286779cfb57a68acea6 ""
-  "mainBD1.toc" 1693993230 5685 9bc25858fe1b4fc1963a257a7764e375 "pdflatex"
+  "mainBD1.aux" 1696360834 9234 489c36984939a2bc0c6e3178c578a735 "pdflatex"
+  "mainBD1.out" 1696360834 11565 8b19bc41172d6a0f8ad7639463c4d21b "pdflatex"
+  "mainBD1.tex" 1696360831 47001 1e68876347c5d286779cfb57a68acea6 ""
+  "mainBD1.toc" 1696360834 5685 9bc25858fe1b4fc1963a257a7764e375 "pdflatex"
   (generated)
   "mainBD1.aux"
   "mainBD1.log"
