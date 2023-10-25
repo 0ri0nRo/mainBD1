@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1696360831 "/home/alex/uni/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" "mainBD1.pdf" "mainBD1" 1696360835 0
-  "/home/alex/uni/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" 1696360831 47001 1e68876347c5d286779cfb57a68acea6 ""
+["pdflatex"] 1698222404 "/home/alex/uni/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" "mainBD1.pdf" "mainBD1" 1698222407 0
+  "/home/alex/uni/informatica/Secondo Anno/BD1/mainBD1/mainBD1.tex" 1698222404 47001 1e68876347c5d286779cfb57a68acea6 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1689853683 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1689853683 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -210,10 +210,10 @@
   "im/U.png" 1693902468 143630 583024b9a5ad033cbce871a2be80a7a5 ""
   "im/X.jpg" 1693902468 479499 d0f7f20a840da8b3124be773be825984 ""
   "im/logo_sapienza_new.png" 1693902468 230566 cb057c2f7633fce546392e6407721b5c ""
-  "mainBD1.aux" 1696360834 9234 489c36984939a2bc0c6e3178c578a735 "pdflatex"
-  "mainBD1.out" 1696360834 11565 8b19bc41172d6a0f8ad7639463c4d21b "pdflatex"
-  "mainBD1.tex" 1696360831 47001 1e68876347c5d286779cfb57a68acea6 ""
-  "mainBD1.toc" 1696360834 5685 9bc25858fe1b4fc1963a257a7764e375 "pdflatex"
+  "mainBD1.aux" 1698222407 9234 489c36984939a2bc0c6e3178c578a735 "pdflatex"
+  "mainBD1.out" 1698222407 11565 8b19bc41172d6a0f8ad7639463c4d21b "pdflatex"
+  "mainBD1.tex" 1698222404 47001 1e68876347c5d286779cfb57a68acea6 ""
+  "mainBD1.toc" 1698222407 5685 9bc25858fe1b4fc1963a257a7764e375 "pdflatex"
   (generated)
   "mainBD1.aux"
   "mainBD1.log"
